@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/**
+Thin 100
+Extra-light 200
+Light 300
+Regular 400
+Medium 500
+Semi-bold 600
+Bold 700
+Extra-bold 800
+Black 900
+**/
+.body {
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: #fcfaf9;
+  color: #16161d;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media all and (min-width: 2000px) {
+  .body {
+    width: 1800px;
+  }
+}
+
+* {
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+/*** scroollbar ***/
+*::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(0, 0, 0, 0) 0% 0% no-repeat padding-box;
+}
+
+*::-webkit-scrollbar-button {
+  background: rbga(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-track-piece {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+          box-shadow: inset 0 0 6px rgb(0, 0, 0);
+  border: none;
+  width: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+a :hover {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 10px 0;
+  z-index: 999;
+}
+.header .struct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+.header .struct .logo {
+  display: inline-block;
+  height: 38px;
+}
+.header .struct .logo img {
+  height: 100%;
+}
+.header .struct nav {
+  display: block;
+}
+.header .struct nav ul {
+  list-style-type: none;
+}
+.header .struct nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 1.1em;
+}
+.header .struct .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+.header .struct .btn .txt {
+  font-size: 0.8em;
+  height: 35px;
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #16161d;
+  border-radius: 44px;
+  display: flex;
+  justify-content: center;
+}
+.header .struct .btn .btn_ic {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid #16161d;
+  margin-left: 5px;
+  overflow: hidden;
+}
+.header .struct .btn .btn_ic img {
+  height: 15px;
+}
+.header .struct .btn:hover img {
+  -webkit-animation: swipe 0.38s ease 1;
+          animation: swipe 0.38s ease 1;
+}
+
+.banderol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 15em;
+  height: 100vh;
+  background: #16161d 0% 0% no-repeat padding-box;
+  position: absolute;
+  top: 0px;
+  right: 20%;
+  color: #fcfaf9;
+  overflow: hidden;
+}
+.banderol .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  white-space: nowrap;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: sideways;
+  height: auto;
+}
+.banderol .text span {
+  display: inline-block;
+  margin-top: 50px;
+}
+.banderol .text1 {
+  font-size: 8em;
+  line-height: 1em;
+  font-weight: 900;
+  -webkit-animation: swipeUp 5s linear infinite;
+          animation: swipeUp 5s linear infinite;
+}
+.banderol .text2 {
+  font-size: 4em;
+  line-height: 1em;
+  font-weight: 100;
+  -webkit-animation: swipeDown 12s linear infinite;
+          animation: swipeDown 12s linear infinite;
+}
+
+.flex_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes swipe {
+  0%, 100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-55px, 55px);
+            transform: translate(-55px, 55px);
+  }
+}
+
+@keyframes swipe {
+  0%, 100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-55px, 55px);
+            transform: translate(-55px, 55px);
+  }
+}
+@-webkit-keyframes swipeUp {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+@keyframes swipeUp {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes swipeDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes swipeDown {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}

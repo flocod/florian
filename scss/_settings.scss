@@ -1,0 +1,243 @@
+// color
+$theme: #fcfaf9;
+$color: #16161d;
+//polices
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+/**
+Thin 100
+Extra-light 200
+Light 300
+Regular 400
+Medium 500
+Semi-bold 600
+Bold 700
+Extra-bold 800
+Black 900
+**/
+.body {
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: $theme;
+  color: $color;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: 2000px) {
+    width: 1800px;
+  }
+}
+
+* {
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+// scroll bar
+
+/*** scroollbar ***/
+*::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(0, 0, 0, 0) 0% 0% no-repeat padding-box;
+}
+
+*::-webkit-scrollbar-button {
+  background: rbga(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-track-piece {
+  width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+  border: none;
+  width: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+//link init
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+
+  :hover {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+$struct: 90%;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 10px 0;
+  z-index: 999;
+  .struct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: $struct;
+
+    .logo {
+      display: inline-block;
+      height: 38px;
+      img {
+        height: 100%;
+      }
+    }
+
+    nav {
+      display: block;
+      ul {
+        list-style-type: none;
+        li {
+          display: inline-block;
+          margin-left: 20px;
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.1em;
+      .txt {
+        font-size: 0.8em;
+        height: 35px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color;
+        border-radius: 44px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn_ic {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: 1px solid $color;
+        margin-left: 5px;
+        overflow: hidden;
+        img {
+          height: 15px;
+        }
+      }
+
+      &:hover {
+        img {
+          animation: swipe 0.38s ease 1;
+        }
+      }
+    }
+  }
+}
+
+.banderol {
+  display: flex;
+  justify-content: center;
+
+  width: 15em;
+  height: 100vh;
+  background: $color 0% 0% no-repeat padding-box;
+  position: absolute;
+  top: 0px;
+  right: 20%;
+  color: $theme;
+  overflow: hidden;
+  .text {
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    position: relative;
+   
+    // text-overflow:ellipsis;
+    // overflow: hidden;
+    transition: all 1s ease;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    height: auto;
+
+    span{
+      display: inline-block;
+      margin-top:50px;
+   
+    }
+   
+
+  }
+
+  .text1 {
+    font-size: 8em;
+    line-height: 1em;
+    font-weight: 900;
+    animation: swipeUp 5s linear infinite;
+  }
+  .text2 {
+    font-size: 4em;
+    line-height: 1em;
+    font-weight: 100;
+    animation: swipeDown 12s linear infinite;
+  }
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes swipe {
+  0%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-55px, 55px);
+  }
+}
+
+
+@keyframes swipeUp {
+  // 0%{transform: translateY(0%);}
+  // 100%{transform: translateY(100%);}
+
+  from { transform: translateY(0%); }
+  to { transform: translateY(-100%); }
+
+}
+@keyframes swipeDown {
+  // 0%{transform: translateY(0%);}
+  // 100%{transform: translateY(100%);}
+
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0%); }
+
+}
