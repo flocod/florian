@@ -188,7 +188,7 @@ a :hover {
           justify-content: center;
   width: 15em;
   height: 100vh;
-  background: #16161d 0% 0% no-repeat padding-box;
+  background: #16161d;
   position: absolute;
   top: 0px;
   right: 20%;
@@ -199,10 +199,12 @@ a :hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   white-space: nowrap;
@@ -220,15 +222,17 @@ a :hover {
   font-size: 8em;
   line-height: 1em;
   font-weight: 900;
-  -webkit-animation: swipeUp 5s linear infinite;
-          animation: swipeUp 5s linear infinite;
+  -webkit-animation: swipeUp 10s linear infinite;
+          animation: swipeUp 10s linear infinite;
+  left: 9%;
 }
 .banderol .text2 {
   font-size: 4em;
   line-height: 1em;
   font-weight: 100;
-  -webkit-animation: swipeDown 12s linear infinite;
-          animation: swipeDown 12s linear infinite;
+  -webkit-animation: swipeDown 15s linear infinite;
+          animation: swipeDown 15s linear infinite;
+  right: 5%;
 }
 
 .flex_center {
@@ -270,8 +274,8 @@ a :hover {
             transform: translateY(0%);
   }
   to {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 @keyframes swipeUp {
@@ -280,14 +284,14 @@ a :hover {
             transform: translateY(0%);
   }
   to {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 @-webkit-keyframes swipeDown {
   from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   to {
     -webkit-transform: translateY(0%);
@@ -296,8 +300,8 @@ a :hover {
 }
 @keyframes swipeDown {
   from {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   to {
     -webkit-transform: translateY(0%);
