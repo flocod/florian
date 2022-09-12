@@ -222,17 +222,18 @@ a :hover {
   font-size: 8em;
   line-height: 1em;
   font-weight: 900;
-  -webkit-animation: swipeUp 10s linear infinite;
-          animation: swipeUp 10s linear infinite;
-  left: 9%;
+  -webkit-animation: swipeUp 13s linear infinite;
+          animation: swipeUp 13s linear infinite;
+  text-transform: uppercase;
+  left: 7%;
 }
 .banderol .text2 {
   font-size: 4em;
   line-height: 1em;
   font-weight: 100;
-  -webkit-animation: swipeDown 15s linear infinite;
-          animation: swipeDown 15s linear infinite;
-  right: 5%;
+  -webkit-animation: swipeDown 17s linear infinite;
+          animation: swipeDown 17s linear infinite;
+  right: 10%;
 }
 
 .flex_center {

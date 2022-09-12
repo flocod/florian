@@ -200,15 +200,16 @@ $struct: 90%;
     font-size: 8em;
     line-height: 1em;
     font-weight: 900;
-    animation: swipeUp 10s linear infinite;
-    left: 9%;
+    animation: swipeUp 13s linear infinite;
+    text-transform: uppercase;
+    left: 7%;
   }
   .text2 {
     font-size: 4em;
     line-height: 1em;
     font-weight: 100;
-    animation: swipeDown 15s linear infinite;
-    right: 5%;
+    animation: swipeDown 17s linear infinite;
+    right: 10%;
   }
 }
 
