@@ -12,13 +12,29 @@ Bold 700
 Extra-bold 800
 Black 900
 **/
+.light-theme {
+  --text: #16161d;
+  --fond: #fcfaf9;
+}
+.light-theme .no_light {
+  display: none;
+}
+
+.dark-theme {
+  --text: #fcfaf9;
+  --fond: #16161d;
+}
+.dark-theme .no_dark {
+  display: none;
+}
+
 .body {
   margin: 0 auto;
   padding: 0 auto;
   width: 100%;
   height: 100%;
-  background: #fcfaf9;
-  color: #16161d;
+  background: var(--fond);
+  color: var(--text);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   display: -webkit-box;
@@ -102,6 +118,11 @@ a :hover {
   padding: 10px 0;
   z-index: 999;
 }
+@media all and (max-width: 1000px) {
+  .header {
+    top: 30px;
+  }
+}
 .header .struct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,11 +139,21 @@ a :hover {
   display: inline-block;
   height: 38px;
 }
+@media all and (max-width: 1000px) {
+  .header .struct .logo {
+    height: 30px;
+  }
+}
 .header .struct .logo img {
   height: 100%;
 }
 .header .struct nav {
   display: block;
+}
+@media all and (max-width: 1000px) {
+  .header .struct nav {
+    display: none;
+  }
 }
 .header .struct nav ul {
   list-style-type: none;
@@ -131,52 +162,6 @@ a :hover {
   display: inline-block;
   margin-left: 20px;
   font-size: 1.1em;
-}
-.header .struct .btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  font-size: 1.1em;
-}
-.header .struct .btn .txt {
-  font-size: 0.8em;
-  height: 35px;
-  padding: 0px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid #16161d;
-  border-radius: 44px;
-  display: flex;
-  justify-content: center;
-}
-.header .struct .btn .btn_ic {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  border: 1px solid #16161d;
-  margin-left: 5px;
-  overflow: hidden;
-}
-.header .struct .btn .btn_ic img {
-  height: 15px;
-}
-.header .struct .btn:hover img {
-  -webkit-animation: swipe 0.38s ease 1;
-          animation: swipe 0.38s ease 1;
 }
 
 .banderol {
@@ -188,12 +173,24 @@ a :hover {
           justify-content: center;
   width: 15em;
   height: 100vh;
-  background: #16161d;
+  background: var(--text);
   position: absolute;
   top: 0px;
   right: 20%;
-  color: #fcfaf9;
+  color: var(--fond);
   overflow: hidden;
+}
+@media all and (max-width: 1696px) {
+  .banderol {
+    width: 7.5em;
+    right: 17%;
+  }
+}
+@media all and (max-width: 1590px) {
+  .banderol {
+    display: none;
+    visibility: hidden;
+  }
 }
 .banderol .text {
   display: -webkit-box;
@@ -227,6 +224,12 @@ a :hover {
   text-transform: uppercase;
   left: 7%;
 }
+@media all and (max-width: 1696px) {
+  .banderol .text1 {
+    font-size: 4em;
+    line-height: 0.9em;
+  }
+}
 .banderol .text2 {
   font-size: 4em;
   line-height: 1em;
@@ -234,6 +237,262 @@ a :hover {
   -webkit-animation: swipeDown 17s linear infinite;
           animation: swipeDown 17s linear infinite;
   right: 10%;
+}
+@media all and (max-width: 1696px) {
+  .banderol .text2 {
+    font-size: 2em;
+    line-height: 1.1em;
+    font-weight: 300;
+    letter-spacing: 13px;
+  }
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+.carousel .struct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 90%;
+  height: 100%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  position: relative;
+}
+@media all and (max-width: 1590px) {
+  .carousel .struct {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.carousel .struct .carousel_intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media all and (max-width: 1696px) {
+  .carousel .struct .carousel_intro {
+    width: 45%;
+  }
+}
+@media all and (max-width: 1590px) {
+  .carousel .struct .carousel_intro {
+    width: 100%;
+  }
+}
+@media all and (max-width: 1590px) {
+  .carousel .struct .carousel_intro {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+.carousel .struct .carousel_intro .text_big {
+  font-family: "Italian Plate No1";
+  font-weight: 600;
+  font-size: 4em;
+  letter-spacing: 0em;
+  text-align: right;
+  color: var(--text);
+}
+@media all and (max-width: 1696px) {
+  .carousel .struct .carousel_intro .text_big {
+    font-size: 4em;
+    text-align: left;
+  }
+}
+@media all and (max-width: 1590px) {
+  .carousel .struct .carousel_intro .text_big {
+    text-align: center;
+    width: 100%;
+    font-size: 4.5em;
+  }
+}
+@media all and (max-width: 1274px) {
+  .carousel .struct .carousel_intro .text_big {
+    font-size: 3.5em;
+  }
+}
+@media all and (max-width: 1000px) {
+  .carousel .struct .carousel_intro .text_big {
+    font-size: 3em;
+  }
+}
+@media all and (max-width: 758px) {
+  .carousel .struct .carousel_intro .text_big {
+    margin-bottom: 200px;
+  }
+}
+@media all and (max-width: 500px) {
+  .carousel .struct .carousel_intro .text_big {
+    font-size: 2.5em;
+  }
+}
+@media all and (max-width: 411px) {
+  .carousel .struct .carousel_intro .text_big {
+    font-size: 2em;
+  }
+}
+.carousel .struct .carousel_intro .carousel_intro_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 100px;
+  text-align: left;
+}
+@media all and (max-width: 758px) {
+  .carousel .struct .carousel_intro .carousel_intro_desc {
+    display: none;
+  }
+}
+.carousel .struct .carousel_intro .carousel_intro_desc .text {
+  width: 285px;
+  margin-bottom: 8px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.3em;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text);
+}
+.carousel .struct .carousel_image {
+  display: block;
+  width: 25%;
+}
+@media all and (max-width: 1696px) {
+  .carousel .struct .carousel_image {
+    width: 33%;
+  }
+}
+@media all and (max-width: 1590px) {
+  .carousel .struct .carousel_image {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 25%;
+  }
+}
+@media all and (max-width: 1274px) {
+  .carousel .struct .carousel_image {
+    width: 300px;
+  }
+}
+@media all and (max-width: 427px) {
+  .carousel .struct .carousel_image {
+    width: 80%;
+  }
+}
+.carousel .struct .carousel_image img {
+  width: 100%;
+}
+.carousel .struct .bar_outils {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.carousel .struct .bar_outils .socials_icons {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media all and (max-width: 1968px) {
+  .carousel .struct .bar_outils .socials_icons {
+    width: 180px;
+  }
+}
+@media all and (max-width: 1590px) {
+  .carousel .struct .bar_outils .socials_icons {
+    width: 150px;
+  }
+}
+@media all and (max-width: 758px) {
+  .carousel .struct .bar_outils .socials_icons {
+    width: 100px;
+  }
+}
+.carousel .struct .bar_outils .socials_icons .icon {
+  cursor: pointer;
+  width: 20%;
+  -webkit-filter: drop-shadow(0 0mm 0mm var(--text));
+          filter: drop-shadow(0 0mm 0mm var(--text));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@media all and (max-width: 1968px) {
+  .carousel .struct .bar_outils .socials_icons .icon {
+    width: 40px;
+  }
+}
+@media all and (max-width: 1590px) {
+  .carousel .struct .bar_outils .socials_icons .icon {
+    width: 35px;
+  }
+}
+@media all and (max-width: 758px) {
+  .carousel .struct .bar_outils .socials_icons .icon {
+    width: 25px;
+  }
+}
+.carousel .struct .bar_outils .socials_icons .icon:hover {
+  -webkit-filter: drop-shadow(0 4mm 2mm var(--text));
+          filter: drop-shadow(0 4mm 2mm var(--text));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.carousel .struct .bar_outils .socials_icons .icon img {
+  width: 90%;
 }
 
 .flex_center {
@@ -308,4 +567,68 @@ a :hover {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
+}
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+.btn .txt {
+  font-size: 0.8em;
+  height: 35px;
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--text);
+  border-radius: 44px;
+  display: flex;
+  justify-content: center;
+}
+@media all and (max-width: 1000px) {
+  .btn .txt {
+    font-size: 0.6em;
+    height: 30px;
+  }
+}
+.btn .btn_ic {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--text);
+  color: var(--fond);
+  margin-left: 5px;
+  overflow: hidden;
+}
+@media all and (max-width: 1000px) {
+  .btn .btn_ic {
+    height: 30px;
+    width: 30px;
+  }
+}
+.btn .btn_ic img {
+  height: 15px;
+}
+@media all and (max-width: 1000px) {
+  .btn .btn_ic img {
+    height: 12px;
+  }
+}
+.btn:hover img {
+  -webkit-animation: swipe 0.38s ease 1;
+          animation: swipe 0.38s ease 1;
 }

@@ -1,0 +1,21 @@
+.group_last_news .last_news_box {
+    width: 98%;
+    height: 550px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: 3px solid #1c1d22;
+    border-radius: 26px;
+    box-shadow: 8px 8px 0px #2b2b2b;
+}
+
+.group_last_news .last_news_box {
+    width: 98%;
+    height: 550px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: 3px solid #1c1d22;
+    border-radius: 26px;
+    box-shadow: 8px 8px 0px #2b2b2b;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}

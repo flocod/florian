@@ -1,0 +1,1 @@
+// how to declare variable ?
