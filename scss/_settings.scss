@@ -17,7 +17,7 @@ Extra-bold 800
 Black 900
 **/
 
-.light-theme {
+.light{
   --text: #16161d;
   --fond: #fcfaf9;
 
@@ -26,7 +26,7 @@ Black 900
   }
 }
 
-.dark-theme {
+.dark {
   --text: #fcfaf9;
   --fond: #16161d;
 
@@ -114,7 +114,7 @@ $struct: 90%;
   z-index: 999;
 
   @media all and (max-width: 1000px) {
-    top: 30px;
+    top: 10px;
   }
 
   .struct {
@@ -502,5 +502,54 @@ $struct: 90%;
     img {
       animation: swipe 0.38s ease 1;
     }
+  }
+}
+
+
+.toggle_theme{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 79px;
+height: 47px;
+border-radius: 15px;
+background: var(--text);
+
+  &__struct{
+    display: flex;
+    width: 86%;
+    justify-content:center;
+    align-items: center;
+    height: 89%;
+    transform: translateX(2px);
+    border-radius: 14px;
+background: var(--fond);
+
+.theme_btn{
+height: 85%;
+width: 40%;
+border-radius: 10px;
+background: var(--fond);
+color: var(--text);
+display: flex;
+justify-content: center;
+align-items: center;
+transition: .3s;
+img{
+  width: 50%;
+}
+
+}
+
+.active{
+  transition: .3s;
+  width: 50%;
+  background: var(--text);
+  color: var(--fond);
+  img{
+    width: 60%;
+  }
+}
+
   }
 }

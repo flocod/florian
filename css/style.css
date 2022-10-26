@@ -12,19 +12,19 @@ Bold 700
 Extra-bold 800
 Black 900
 **/
-.light-theme {
+.light {
   --text: #16161d;
   --fond: #fcfaf9;
 }
-.light-theme .no_light {
+.light .no_light {
   display: none;
 }
 
-.dark-theme {
+.dark {
   --text: #fcfaf9;
   --fond: #16161d;
 }
-.dark-theme .no_dark {
+.dark .no_dark {
   display: none;
 }
 
@@ -120,7 +120,7 @@ a :hover {
 }
 @media all and (max-width: 1000px) {
   .header {
-    top: 30px;
+    top: 10px;
   }
 }
 .header .struct {
@@ -631,4 +631,68 @@ a :hover {
 .btn:hover img {
   -webkit-animation: swipe 0.38s ease 1;
           animation: swipe 0.38s ease 1;
+}
+
+.toggle_theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 79px;
+  height: 47px;
+  border-radius: 15px;
+  background: var(--text);
+}
+.toggle_theme__struct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 86%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 89%;
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
+  border-radius: 14px;
+  background: var(--fond);
+}
+.toggle_theme__struct .theme_btn {
+  height: 85%;
+  width: 40%;
+  border-radius: 10px;
+  background: var(--fond);
+  color: var(--text);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.toggle_theme__struct .theme_btn img {
+  width: 50%;
+}
+.toggle_theme__struct .active {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 50%;
+  background: var(--text);
+  color: var(--fond);
+}
+.toggle_theme__struct .active img {
+  width: 60%;
 }
