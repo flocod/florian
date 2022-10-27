@@ -51,6 +51,7 @@ Black 900
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: crosshair;
 }
 @media all and (min-width: 2000px) {
   .body {
@@ -973,5 +974,29 @@ a :hover {
   to {
     -webkit-transform: translate3d(-7rem, 0, 0);
     transform: translate3d(-7rem, 0, 0);
+  }
+}
+.lottie_bird {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-125%);
+          transform: translateX(-50%) translateY(-125%);
+  width: 20%;
+  height: auto;
+  z-index: 500000;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  mix-blend-mode: difference;
+}
+@media all and (max-width: 775px) {
+  .lottie_bird {
+    width: 40%;
+  }
+}
+@media all and (max-width: 500px) {
+  .lottie_bird {
+    width: 55%;
   }
 }

@@ -72,7 +72,7 @@ Black 900
   font-weight: 400;
   display: flex;
   flex-direction: column;
-
+  cursor:crosshair;
   @media all and (min-width: 2000px) {
     width: 1800px;
   }
@@ -794,4 +794,25 @@ $struct: 90%;
     -webkit-transform: translate3d(-7rem, 0, 0);
     transform: translate3d(-7rem, 0, 0);
   }
+}
+
+.lottie_bird{
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-125%);
+  width: 20%;
+
+  @media all and (max-width: 775px){
+    width: 40%;
+  }
+  @media all and (max-width: 500px){
+    width: 55%;
+  }
+
+  height: auto;
+z-index: 500000;
+filter: grayscale(100%);
+mix-blend-mode: difference;
 }
