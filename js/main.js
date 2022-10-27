@@ -82,3 +82,42 @@ const setTheme = () => {
   });
 
 //   setTheme();
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - $(".moving_shape1").height();
+    var w = $(window).width() -  $(".moving_shape1").width();
+
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    var nb = Math.floor(Math.random() * (nw/2));
+
+    
+    return [nh,nw,nb];    
+    
+}
+
+function animateDiv(myclass){
+    var newq = makeNewPosition();
+    $(myclass).animate({ top: newq[0], left: newq[1],borderWidth: newq[2] }, 8000,   function(){
+      animateDiv(myclass);      
+      console.log("zsfvgsvf")  
+    });
+    
+};
+function animateDiv2(myclass){
+    var newq = makeNewPosition();
+    $(myclass).animate({ top: newq[0], left: newq[1] }, 5000,   function(){
+      animateDiv(myclass);      
+      console.log("zsfvgsvf")  
+    });
+    
+};
+
+$(document).ready(function(){
+    animateDiv('.moving_shape1');
+    // animateDiv2('.moving_shape2');
+
+});
+

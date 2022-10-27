@@ -16,6 +16,12 @@ Black 900
   --text: #16161d;
   --fond: #fcfaf9;
 }
+.light * {
+  mix-blend-mode: normal !important;
+}
+.light .moving_shape {
+  opacity: 0.1;
+}
 .light .no_light {
   display: none;
 }
@@ -33,6 +39,7 @@ Black 900
   padding: 0 auto;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   background: var(--fond);
   color: var(--text);
   font-family: "Poppins", sans-serif;
@@ -117,6 +124,7 @@ a :hover {
   left: 0px;
   padding: 10px 0;
   z-index: 999;
+  mix-blend-mode: difference;
 }
 @media all and (max-width: 1000px) {
   .header {
@@ -174,6 +182,7 @@ a :hover {
   width: 15em;
   height: 100vh;
   background: var(--text);
+  mix-blend-mode: difference;
   position: absolute;
   top: 0px;
   right: 20%;
@@ -264,6 +273,8 @@ a :hover {
           flex-direction: column;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 .carousel .struct {
   display: -webkit-box;
@@ -301,6 +312,7 @@ a :hover {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 40%;
+  mix-blend-mode: difference;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -446,6 +458,7 @@ a :hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  mix-blend-mode: difference;
 }
 .carousel .struct .bar_outils .socials_icons {
   width: 10%;
@@ -720,4 +733,113 @@ a :hover {
 }
 .toggle_theme__struct .active img {
   width: 60%;
+}
+
+.moving_shape {
+  position: absolute;
+  width: 50vw;
+  height: 80vh;
+  opacity: 1;
+  border: 0px solid rgba(255, 255, 255, 0.808);
+  background-color: var(--text);
+  background-repeat: repeat;
+  background-size: auto auto;
+  background-repeat: repeat;
+  color: #fff;
+  -webkit-animation: bg-move 30s ease infinite forwards, border-move 25s ease infinite forwards;
+          animation: bg-move 30s ease infinite forwards, border-move 25s ease infinite forwards;
+}
+
+@-webkit-keyframes bg-move {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes bg-move {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+@-webkit-keyframes border-move {
+  0% {
+    border-radius: 51% 49% 34% 66%/39% 66% 34% 61%;
+  }
+  10% {
+    border-radius: 39% 61% 38% 62%/53% 54% 46% 47%;
+  }
+  20% {
+    border-radius: 56% 44% 52% 48%/57% 35% 65% 43%;
+  }
+  30% {
+    border-radius: 41% 59% 45% 55%/33% 56% 44% 67%;
+  }
+  40% {
+    border-radius: 46% 54% 60% 40%/55% 74% 26% 45%;
+  }
+  50% {
+    border-radius: 44% 56% 22% 78%/31% 74% 26% 69%;
+  }
+  60% {
+    border-radius: 31% 69% 32% 68%/31% 71% 29% 69%;
+  }
+  70% {
+    border-radius: 44% 56% 60% 40%/63% 36% 64% 37%;
+  }
+  80% {
+    border-radius: 46% 54% 38% 62%/44% 48% 52% 56%;
+  }
+  90% {
+    border-radius: 66% 34% 57% 43%/49% 51% 49% 51%;
+  }
+  100% {
+    border-radius: 51% 49% 34% 66%/39% 66% 34% 61%;
+  }
+}
+@keyframes border-move {
+  0% {
+    border-radius: 51% 49% 34% 66%/39% 66% 34% 61%;
+  }
+  10% {
+    border-radius: 39% 61% 38% 62%/53% 54% 46% 47%;
+  }
+  20% {
+    border-radius: 56% 44% 52% 48%/57% 35% 65% 43%;
+  }
+  30% {
+    border-radius: 41% 59% 45% 55%/33% 56% 44% 67%;
+  }
+  40% {
+    border-radius: 46% 54% 60% 40%/55% 74% 26% 45%;
+  }
+  50% {
+    border-radius: 44% 56% 22% 78%/31% 74% 26% 69%;
+  }
+  60% {
+    border-radius: 31% 69% 32% 68%/31% 71% 29% 69%;
+  }
+  70% {
+    border-radius: 44% 56% 60% 40%/63% 36% 64% 37%;
+  }
+  80% {
+    border-radius: 46% 54% 38% 62%/44% 48% 52% 56%;
+  }
+  90% {
+    border-radius: 66% 34% 57% 43%/49% 51% 49% 51%;
+  }
+  100% {
+    border-radius: 51% 49% 34% 66%/39% 66% 34% 61%;
+  }
 }
