@@ -321,16 +321,17 @@ a :hover {
   }
 }
 .carousel .struct .carousel_intro .text_big {
-  font-family: "Italian Plate No1";
-  font-weight: 600;
+  font-family: "Poppins";
+  font-weight: 200;
+  text-transform: capitalize;
   font-size: 4em;
   letter-spacing: 0em;
   text-align: right;
   color: var(--text);
 }
-@media all and (max-width: 1696px) {
+@media all and (max-width: 1784px) {
   .carousel .struct .carousel_intro .text_big {
-    font-size: 4em;
+    font-size: 3.5em;
     text-align: left;
   }
 }
@@ -356,14 +357,19 @@ a :hover {
     margin-bottom: 200px;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 543px) {
   .carousel .struct .carousel_intro .text_big {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 }
 @media all and (max-width: 411px) {
   .carousel .struct .carousel_intro .text_big {
     font-size: 2em;
+  }
+}
+@media all and (max-width: 360px) {
+  .carousel .struct .carousel_intro .text_big {
+    font-size: 1.7em;
   }
 }
 .carousel .struct .carousel_intro .carousel_intro_desc {
@@ -651,6 +657,17 @@ a :hover {
   border-radius: 15px;
   background: var(--text);
 }
+@media all and (max-width: 1024px) {
+  .toggle_theme {
+    height: 37px;
+    width: 70px;
+  }
+}
+@media all and (max-width: 758px) {
+  .toggle_theme {
+    height: 34px;
+  }
+}
 .toggle_theme__struct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -685,6 +702,11 @@ a :hover {
           align-items: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media all and (max-width: 758px) {
+  .toggle_theme__struct .theme_btn {
+    font-size: 0.75em;
+  }
 }
 .toggle_theme__struct .theme_btn img {
   width: 50%;
