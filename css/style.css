@@ -171,6 +171,9 @@ a :hover {
   margin-left: 20px;
   font-size: 1.1em;
 }
+.header .struct nav ul li:hover {
+  cursor: pointer;
+}
 
 .banderol {
   display: -webkit-box;
@@ -669,6 +672,9 @@ a :hover {
   height: 47px;
   border-radius: 15px;
   background: var(--text);
+}
+.toggle_theme:hover {
+  cursor: pointer;
 }
 @media all and (max-width: 1024px) {
   .toggle_theme {
