@@ -752,7 +752,7 @@ a :hover {
   background-color: var(--text);
   background-repeat: repeat;
   background-size: auto auto;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   color: #fff;
   -webkit-animation: bg-move 30s ease infinite forwards, border-move 25s ease infinite forwards;
           animation: bg-move 30s ease infinite forwards, border-move 25s ease infinite forwards;
