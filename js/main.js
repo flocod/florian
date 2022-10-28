@@ -14,7 +14,7 @@ function loader_percentage() {
     c += 1;
     let perc = ((100 / tot) * c) << 0;
 
-    let tween = TweenLite.to(loader_percen, 1, {
+    let tween = TweenLite.to(loader_percen, 3, {
       percen: perc,
       onUpdate: showpercen,
     });
@@ -40,7 +40,7 @@ loader_percentage();
 // définit le theme de l'app
 const setTheme = () => {
   //set theme on load
-  if (localStorage.getItem("theme") == "light") {
+  if ( localStorage.getItem("theme") && localStorage.getItem("theme") == "light") {
     document
       .querySelector("meta[name='theme-color']")
       .setAttribute("content", "#fcfaf9");
@@ -50,25 +50,23 @@ const setTheme = () => {
       $("body .weather").removeClass("active");
       $("body #weather_light").addClass("active");
     }, 300);
-  } else if (localStorage.getItem("theme") == "dark") {
+  } else if (localStorage.getItem("theme") && localStorage.getItem("theme") == "dark") {
     document
       .querySelector("meta[name='theme-color']")
       .setAttribute("content", "#16161d");
 
     $("body").addClass("dark");
-    $("body .weather").removeClass("active");
-    $("body #weather_dark").addClass("active");
 
     setTimeout(function () {
-      $("body .weather").removeClass("active");
-      $("body #weather_dark").addClass("active");
+      $("body .theme_btn").removeClass("active");
+      $("body #theme_dark").addClass("active");
     }, 300);
   } else {
-    localStorage.setItem("theme", "dark");
+    localStorage.setItem("theme", "light");
 
-    $("body").addClass("dark");
-    $("#theme_switcher .weather").removeClass("active");
-    $("body #weather_dark").addClass("active");
+    $("body").addClass("light");
+    $("#theme_switcher .theme_btn").removeClass("active");
+    $("body #theme_light").addClass("active");
   }
   // set theme on load
 };
@@ -87,12 +85,8 @@ $("body").on("click", "#theme_switcher", () => {
       .querySelector("meta[name='theme-color']")
       .setAttribute("content", "#16161d");
 
-    // let meta = document.createElement("meta");
-    // meta.name = "theme-color";
-    // meta.content = "#f5f5f5";
-    // document.getElementsByTagName("head")[0].appendChild(meta);
-
     localStorage.setItem("theme", "dark");
+
   } else if (current_theme == "dark") {
     $("body").removeClass("dark");
     $("body").addClass("light");
@@ -116,9 +110,11 @@ $("body").on("click", "#theme_switcher", () => {
   }
 });
 
-//   setTheme();
-let last_left_position;
+  //set the user theme
+  setTheme();
 
+
+let last_left_position;
 function makeNewPosition() {
   // Get viewport dimensions (remove the dimension of the div)
   let h = $(window).height() - $(".moving_shape1").height();
