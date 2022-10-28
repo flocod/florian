@@ -1,3 +1,40 @@
+function loader_percentage() {
+  let loader_percen = { percen: 0 },
+    percenDisplay = document.getElementById("percenDisplay");
+
+  function showpercen() {
+    percenDisplay.innerHTML = loader_percen.percen.toFixed(1);
+
+    if (loader_percen.percen.toFixed(2) >= 100) {
+      $(".loader").fadeOut();
+    }
+  }
+
+  function imgLoaded() {
+    c += 1;
+    let perc = ((100 / tot) * c) << 0;
+
+    let tween = TweenLite.to(loader_percen, 1, {
+      percen: perc,
+      onUpdate: showpercen,
+    });
+  }
+
+  let img = document.images,
+    c = 0,
+    tot = img.length;
+
+  for (let i = 0; i < tot; i++) {
+    let tImg = new Image();
+    tImg.onload = imgLoaded;
+    tImg.onerror = imgLoaded;
+    tImg.src = img[i].src;
+    console.log(` image ${i} est correctement chargée`);
+  }
+}
+
+loader_percentage();
+
 // how to declare letiable ?
 
 // définit le theme de l'app
@@ -80,6 +117,7 @@ $("body").on("click", "#theme_switcher", () => {
 });
 
 //   setTheme();
+let last_left_position;
 
 function makeNewPosition() {
   // Get viewport dimensions (remove the dimension of the div)
@@ -116,28 +154,32 @@ function animateDiv(myclass) {
 }
 function animateDiv2(myclass) {
   let newq = makeNewPosition2();
-//   $(myclass).animate({ top: newq[0], left: newq[1] }, 1000, function () {
-//     //   animateDiv(myclass);
-//     console.log("zsfvgsvf");
-//   });
+  //   $(myclass).animate({ top: newq[0], left: newq[1] }, 1000, function () {
+  //     //   animateDiv(myclass);
+  //     console.log("zsfvgsvf");
+  //   });
   console.log("zsfvgsvf");
 
   TweenLite.to(myclass, 5, {
     css: {
-        top: newq[0], left: newq[1]
+      top: newq[0],
+      left: newq[1],
     },
   });
 
+  if (last_left_position > newq[1]) {
+    $("#lottie_bird").addClass("bird_back");
+  } else {
+    $("#lottie_bird").removeClass("bird_back");
+  }
 
-
+  last_left_position = newq[1];
 }
 
 $(document).ready(function () {
   animateDiv(".moving_shape1");
   // animateDiv2('#lottie_bird');
 });
-
-
 
 let timeout;
 let MoveInterval;
@@ -146,11 +188,16 @@ $(window).on("mousemove", function moveContain_cursor(e) {
   clearInterval(MoveInterval);
   timeout = setTimeout(function () {
     console.log("mouse not move");
-   MoveInterval =setInterval(function(){
-    animateDiv2('#lottie_bird');
-   },5000);
-
+    MoveInterval = setInterval(function () {
+      animateDiv2("#lottie_bird");
+    }, 5000);
   }, 5000);
+
+  if (last_left_position > e.clientX) {
+    $("#lottie_bird").addClass("bird_back");
+  } else {
+    $("#lottie_bird").removeClass("bird_back");
+  }
 
   TweenLite.to("#lottie_bird", 1, {
     css: {
@@ -159,8 +206,5 @@ $(window).on("mousemove", function moveContain_cursor(e) {
     },
   });
 
-  // $("#lottie_bird").animate({ top: e.clientY, left:  e.clientX, }, 1000,   function(){
-
-  //     console.log("zsfvgsvf")
-  // });
+  last_left_position = e.clientX;
 });

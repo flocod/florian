@@ -48,6 +48,13 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="body dark">
+
+    <div class="loader">
+      <div class="loader_counter">
+        <span id="percenDisplay">0</span> %
+      </div>
+    </div>
+
     <main class="main">
       <!-- enter content -->
       <header class="header">
@@ -75,9 +82,10 @@
       </header>
 
       <div class="carousel">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player  src="https://assets6.lottiefiles.com/private_files/lf30_4r6a1nau.json" class="lottie_bird" id="lottie_bird"  background="transparent"  speed="1"   loop autoplay></lottie-player>
-        <!-- https://lottiefiles.com/50288-bird-flying-2 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.4.3/lottie-player.js" integrity="sha512-gloNJjJNXOqLPOVxOJ/Sg9VN4jSPZpDdEQC+CDP0TczZ6OaOk0Ru1daFEOT/XAJY7fYABwFWVRXOx4HMFr6+lA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+        <lottie-player  src="https://assets6.lottiefiles.com/private_files/lf30_4r6a1nau.json"  class="lottie_bird" id="lottie_bird"  background="transparent"  speed="1"   loop autoplay></lottie-player>
+      
         
         <div class="moving_shape moving_shape1"></div>
         <!-- <div class="moving_shape moving_shape2"></div> -->
@@ -185,9 +193,10 @@
     </main>
 
     <div class="noise"></div>
-    <div class="noise"></div>
+    <!-- <div class="noise"></div> -->
 
-   
+
+
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"

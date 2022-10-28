@@ -17,8 +17,6 @@ Extra-bold 800
 Black 900
 **/
 
-
-
 .light {
   --text: #16161d;
   --fond: #fcfaf9;
@@ -72,17 +70,38 @@ Black 900
   font-weight: 400;
   display: flex;
   flex-direction: column;
-  cursor:crosshair;
+  cursor: crosshair;
   @media all and (min-width: 2000px) {
     width: 1800px;
   }
 }
 
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--text);
+  color: var(--fond);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1900000;
+  font-family: "Montserrat";
+  font-weight: 900;
+  letter-spacing: 0px;
+  font-size: 6vw;
+  span{
+    font-size: 3em;
+  }
+}
+
+
 * {
   outline: none;
   scroll-behavior: smooth;
 }
-
 
 // scroll bar
 
@@ -171,7 +190,7 @@ $struct: 90%;
         li {
           &:hover {
             cursor: pointer;
-           }
+          }
           display: inline-block;
           margin-left: 20px;
           font-size: 1.1em;
@@ -552,7 +571,7 @@ $struct: 90%;
   background: var(--text);
   &:hover {
     cursor: pointer;
-   }
+  }
   // mix-blend-mode: difference;
   @media all and (max-width: 1024px) {
     height: 37px;
@@ -620,8 +639,6 @@ $struct: 90%;
   color: #fff;
   animation: bg-move 30s ease infinite forwards,
     border-move 25s ease infinite forwards;
-
-
 }
 
 @keyframes bg-move {
@@ -671,7 +688,6 @@ $struct: 90%;
     border-radius: 51% 49% 34% 66% / 39% 66% 34% 61%;
   }
 }
-
 
 /* ------------------------- Grain -------------------------------------------------- */
 .noise {
@@ -796,23 +812,29 @@ $struct: 90%;
   }
 }
 
-.lottie_bird{
+.lottie_bird {
   display: block;
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translateX(-50%) translateY(-125%);
+  transform: translateX(-50%) translateY(-115%);
   width: 20%;
 
-  @media all and (max-width: 775px){
+  @media all and (max-width: 775px) {
     width: 40%;
   }
-  @media all and (max-width: 500px){
+  @media all and (max-width: 500px) {
     width: 55%;
   }
 
   height: auto;
-z-index: 500000;
-filter: grayscale(100%);
-mix-blend-mode: difference;
+  z-index: 500000;
+  filter: grayscale(100%);
+  mix-blend-mode: difference;
 }
+
+.bird_back {
+
+  transform: translateX(-50%) translateY(-115%) scaleX(-1);
+}
+
