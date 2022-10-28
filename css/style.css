@@ -12,11 +12,26 @@ Bold 700
 Extra-bold 800
 Black 900
 **/
+@font-face {
+  font-family: "italia";
+  src: url("../fonts/Italian.woff2") format("woff2"), url("../fonts/Italian.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 .light {
   --text: #16161d;
+  --text_rgb: 22, 22, 29;
   --fond: #fcfaf9;
+  --fond_rgb: 252, 250, 249;
 }
 .light * {
+  mix-blend-mode: normal !important;
+}
+.light div {
+  mix-blend-mode: normal !important;
+}
+.light img {
   mix-blend-mode: normal !important;
 }
 .light .moving_shape {
@@ -28,7 +43,9 @@ Black 900
 
 .dark {
   --text: #fcfaf9;
+  --text_rgb: 252, 250, 249;
   --fond: #16161d;
+  --fond_rgb: 22, 22, 29;
 }
 .dark .no_dark {
   display: none;
@@ -38,7 +55,7 @@ Black 900
   margin: 0 auto;
   padding: 0 auto;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow-x: hidden;
   background: var(--fond);
   color: var(--text);
@@ -69,8 +86,8 @@ Black 900
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: var(--fond);
   color: var(--text);
   position: fixed;
@@ -132,7 +149,7 @@ a :hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -151,7 +168,10 @@ a :hover {
   top: 0px;
   left: 0px;
   padding: 10px 0;
-  z-index: 999;
+  z-index: 11111;
+  background: rgba(var(--fond_rgb), 0.7);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
   mix-blend-mode: difference;
 }
 @media all and (max-width: 1000px) {
@@ -219,6 +239,7 @@ a :hover {
   right: 20%;
   color: var(--fond);
   overflow: hidden;
+  z-index: 21111;
 }
 @media all and (max-width: 1696px) {
   .banderol {
@@ -1031,4 +1052,274 @@ a :hover {
 .bird_back {
   -webkit-transform: translateX(-50%) translateY(-115%) scaleX(-1);
           transform: translateX(-50%) translateY(-115%) scaleX(-1);
+}
+
+.light {
+  --text: #16161d;
+  --text_rgb: 22, 22, 29;
+  --fond: #fcfaf9;
+  --fond_rgb: 252, 250, 249;
+}
+.light * {
+  mix-blend-mode: normal !important;
+}
+.light div {
+  mix-blend-mode: normal !important;
+}
+.light img {
+  mix-blend-mode: normal !important;
+}
+.light .moving_shape {
+  opacity: 0.1;
+}
+.light .no_light {
+  display: none;
+}
+
+.dark {
+  --text: #fcfaf9;
+  --text_rgb: 252, 250, 249;
+  --fond: #16161d;
+  --fond_rgb: 22, 22, 29;
+}
+.dark .no_dark {
+  display: none;
+}
+
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.group__struct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+}
+.group__struct__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+}
+.group__struct__title .left .experience {
+  display: block;
+}
+.group__struct__title .left .experience .t1 {
+  font-family: "italia";
+  font-weight: 600;
+  font-size: 112px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text);
+}
+.group__struct__title .left .experience .t2 {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 49px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text);
+}
+.group__struct__title .right {
+  text-align: left;
+  width: 40%;
+}
+.group__struct__title .right .experience_text {
+  font-family: "italia";
+  font-weight: 600;
+  font-size: 80px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text);
+}
+.group__struct__title .right .experience_text .btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: initial;
+}
+.group__struct__title .right .experience_text .btn .btn_ic {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.group__struct__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+}
+.group__struct__container .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32%;
+  height: 461px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 30px;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.group__struct__container .project .project_struct {
+  height: 95%;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.group__struct__container .project .project_struct .desc {
+  width: 100%;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 12px;
+  /* Note: currently only Safari supports backdrop-filter */
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: blur(30px);
+  background: rgba(var(--text_rgb), 0.7);
+  /* (plus shape's fill blended on top as a separate layer with 61% opacity) */
+}
+.group__struct__container .project .project_struct .desc .des_struct {
+  width: 90%;
+  margin-top: 30px;
+}
+.group__struct__container .project .project_struct .desc .des_struct .name_project {
+  font-family: "Segoe UI";
+  font-weight: bold;
+  font-size: 22px;
+  text-align: left;
+  color: var(--fond);
+}
+.group__struct__container .project .project_struct .desc .des_struct .date_project {
+  font-family: "Segoe UI";
+  font-weight: normal;
+  font-size: 20px;
+  text-align: left;
+  color: var(--fond);
+  opacity: 0.9;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.group__struct__container .project .project_struct .desc .des_struct .desc_project {
+  font-family: "Segoe UI";
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+  color: var(--fond);
+  opacity: 0.9;
+}
+.group__struct__container .project .project_struct .link_project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 20%;
+  margin-top: 10px;
+  border-radius: 12px;
+  background: rgba(22, 22, 29, 0.1725490196);
+  font-size: 20px;
+  color: var(--fond);
+  /* Note: currently only Safari supports backdrop-filter */
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  --webkit-backdrop-filter: blur(30px);
+  background: rgba(var(--text_rgb), 0.7);
+  /* (plus shape's fill blended on top as a separate layer with 61% opacity) */
+}
+.group__struct__container .project .project_struct .link_project .ico {
+  display: inline-block;
+  margin-right: 20px;
+}
+.group__struct__container .project:hover {
+  opacity: 1;
+}
+.group__struct__container .project:hover .project_struct {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
