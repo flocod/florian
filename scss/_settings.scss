@@ -227,10 +227,10 @@ $struct: 90%;
 }
 
 .header_shade{
-  background: #{'rgba(var(--fond_rgb), 0.7)'};
+  background: #{'rgba(var(--fond_rgb), 1)'};
   // background: var(--fond);
-  backdrop-filter: blur(10px);
-  mix-blend-mode: difference;
+  // backdrop-filter: blur(10px);
+  // mix-blend-mode: difference;
 }
 
 .banderol {
@@ -247,10 +247,14 @@ $struct: 90%;
   color: var(--fond);
   overflow: hidden;
   z-index: 21111;
-  @media all and (max-width: 1696px) {
+  @media all and (max-width: 1496px) {
     width: 7.5em;
     right: 17%;
   }
+  // @media all and (max-width: 1696px) {
+  //   width: 7.5em;
+  //   right: 17%;
+  // }
 
   @media all and (max-width: 1200px) {
     display: none;
@@ -287,10 +291,15 @@ $struct: 90%;
     text-transform: uppercase;
     left: 7%;
 
-    @media all and (max-width: 1696px) {
+    @media all and (max-width: 1496px) {
       font-size: 4em;
       line-height: 0.9em;
     }
+
+    // @media all and (max-width: 1696px) {
+    //   font-size: 4em;
+    //   line-height: 0.9em;
+    // }
   }
   .text2 {
     font-size: 4em;
@@ -298,8 +307,15 @@ $struct: 90%;
     font-weight: 100;
     animation: swipeDown 17s linear infinite;
     right: 10%;
-    @media all and (max-width: 1696px) {
-      font-size: 2em;
+    // @media all and (max-width: 1696px) {
+    //   font-size: 2em;
+    //   line-height: 1.1em;
+    //   font-weight: 300;
+    //   letter-spacing: 13px;
+    // }
+
+    @media all and (max-width: 1496px) {
+           font-size: 2em;
       line-height: 1.1em;
       font-weight: 300;
       letter-spacing: 13px;
@@ -398,7 +414,7 @@ $struct: 90%;
           margin-bottom: 200px;
         }
 
-        @media all and (max-height: 787px){
+        @media all and (max-height: 870px){
          line-height: 1.3em;
      
         }
@@ -424,7 +440,7 @@ $struct: 90%;
         @media all and (max-width: 758px) {
           display: none;
         }
-        @media all and (max-height: 787px) {
+        @media all and (max-height: 870px) {
           margin-top: 20px;
         }
         .text {
@@ -444,6 +460,7 @@ $struct: 90%;
       display: block;
       width: 25%;
       filter: grayscale(100%);
+     
       @media all and (max-width: 1696px) {
         width: 33%;
       }
@@ -459,16 +476,20 @@ $struct: 90%;
         width: 300px;
       }
 
-      @media all and (max-height: 787px) {
+      @media all and (max-height: 870px) {
         width: 25%;
       }
 
+      @media all and (max-width: 750px) {
+        width: 40%;
+      }
       @media all and (max-width: 427px) {
         width: 80%;
       }
 
       img {
         width: 100%;
+        transform: translateY(20%);
       }
     }
 

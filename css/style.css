@@ -232,10 +232,7 @@ a :hover {
 }
 
 .header_shade {
-  background: rgba(var(--fond_rgb), 0.7);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  mix-blend-mode: difference;
+  background: rgba(var(--fond_rgb), 1);
 }
 
 .banderol {
@@ -256,7 +253,7 @@ a :hover {
   overflow: hidden;
   z-index: 21111;
 }
-@media all and (max-width: 1696px) {
+@media all and (max-width: 1496px) {
   .banderol {
     width: 7.5em;
     right: 17%;
@@ -300,7 +297,7 @@ a :hover {
   text-transform: uppercase;
   left: 7%;
 }
-@media all and (max-width: 1696px) {
+@media all and (max-width: 1496px) {
   .banderol .text1 {
     font-size: 4em;
     line-height: 0.9em;
@@ -314,7 +311,7 @@ a :hover {
           animation: swipeDown 17s linear infinite;
   right: 10%;
 }
-@media all and (max-width: 1696px) {
+@media all and (max-width: 1496px) {
   .banderol .text2 {
     font-size: 2em;
     line-height: 1.1em;
@@ -435,7 +432,7 @@ a :hover {
     margin-bottom: 200px;
   }
 }
-@media all and (max-height: 787px) {
+@media all and (max-height: 870px) {
   .carousel .struct .carousel_intro .text_big {
     line-height: 1.3em;
   }
@@ -474,7 +471,7 @@ a :hover {
     display: none;
   }
 }
-@media all and (max-height: 787px) {
+@media all and (max-height: 870px) {
   .carousel .struct .carousel_intro .carousel_intro_desc {
     margin-top: 20px;
   }
@@ -515,9 +512,14 @@ a :hover {
     width: 300px;
   }
 }
-@media all and (max-height: 787px) {
+@media all and (max-height: 870px) {
   .carousel .struct .carousel_image {
     width: 25%;
+  }
+}
+@media all and (max-width: 750px) {
+  .carousel .struct .carousel_image {
+    width: 40%;
   }
 }
 @media all and (max-width: 427px) {
@@ -527,6 +529,8 @@ a :hover {
 }
 .carousel .struct .carousel_image img {
   width: 100%;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 .carousel .struct .bar_outils {
   position: absolute;
