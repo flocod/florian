@@ -63,6 +63,11 @@ Black 900
   }
 }
 
+// html{
+//   overflow: hidden;
+//   height: 100vh;
+//   width: 100vw;
+// }
 .body {
   margin: 0 auto;
   padding: 0 auto;
@@ -79,6 +84,9 @@ Black 900
   @media all and (min-width: 2000px) {
     width: 1800px;
   }
+
+
+
 }
 
 .loader{
@@ -106,6 +114,12 @@ Black 900
 * {
   outline: none;
   scroll-behavior: smooth;
+}
+
+
+*::selection{
+  background: var(--text);
+  color: var(--fond);
 }
 
 // scroll bar
@@ -147,11 +161,15 @@ a {
 .main {
   display: flex;
   flex-direction: column;
-  height: auto;
+  // height: 100%;
   width: 100%;
+  overflow-x:hidden ;
+  overflow-y: auto;
 }
 
 $struct: 90%;
+
+
 
 .header {
   display: flex;
@@ -163,12 +181,13 @@ $struct: 90%;
   left: 0px;
   padding: 10px 0;
   z-index: 11111;
-  background: #{'rgba(var(--fond_rgb), 0.7)'};
-  backdrop-filter: blur(30px);
-  mix-blend-mode: difference;
+
   @media all and (max-width: 1000px) {
-    top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
+
+
 
   .struct {
     display: flex;
@@ -207,6 +226,13 @@ $struct: 90%;
   }
 }
 
+.header_shade{
+  background: #{'rgba(var(--fond_rgb), 0.7)'};
+  // background: var(--fond);
+  backdrop-filter: blur(10px);
+  mix-blend-mode: difference;
+}
+
 .banderol {
   display: flex;
   justify-content: center;
@@ -226,7 +252,7 @@ $struct: 90%;
     right: 17%;
   }
 
-  @media all and (max-width: 1590px) {
+  @media all and (max-width: 1200px) {
     display: none;
     visibility: hidden;
   }
@@ -288,7 +314,11 @@ $struct: 90%;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh);
+  @media all and (max-width: 750px){
+    height: calc(100vh - 50px);
+  }
+
   overflow: hidden;
   position: relative;
 
@@ -300,7 +330,7 @@ $struct: 90%;
     justify-content: left;
     position: relative;
 
-    @media all and (max-width: 1590px) {
+    @media all and (max-width: 1200px) {
       justify-content: center;
 
       align-items: center;
@@ -315,13 +345,13 @@ $struct: 90%;
       @media all and (max-width: 1696px) {
         width: 45%;
       }
-      @media all and (max-width: 1590px) {
+      @media all and (max-width: 1200px) {
         width: 100%;
       }
 
       transform: translateY(-50%);
       // border:  1px solid;
-      @media all and (max-width: 1590px) {
+      @media all and (max-width: 1200px) {
         transform: translateY(0%);
       }
       .text_big {
@@ -343,15 +373,22 @@ $struct: 90%;
         //   text-align: left;
         // }
 
-        @media all and (max-width: 1590px) {
-          text-align: center;
+        @media all and (max-width: 1391px) {
+    
           width: 100%;
-          font-size: 4.5em;
+          font-size: 3em;
         }
+        // @media all and (max-width: 1200px) {
+        //   text-align: center;
+        //   width: 100%;
+        //   font-size: 4.5em;
+        // }
 
-        @media all and (max-width: 1274px) {
-          font-size: 3.5em;
-        }
+        // @media all and (max-width: 1274px) {
+        //   font-size: 3.5em;
+        // }
+
+
 
         @media all and (max-width: 1000px) {
           font-size: 3em;
@@ -359,6 +396,11 @@ $struct: 90%;
 
         @media all and (max-width: 758px) {
           margin-bottom: 200px;
+        }
+
+        @media all and (max-height: 787px){
+         line-height: 1.3em;
+     
         }
 
         @media all and (max-width: 543px) {
@@ -382,6 +424,9 @@ $struct: 90%;
         @media all and (max-width: 758px) {
           display: none;
         }
+        @media all and (max-height: 787px) {
+          margin-top: 20px;
+        }
         .text {
           width: 285px;
           margin-bottom: 8px;
@@ -403,7 +448,7 @@ $struct: 90%;
         width: 33%;
       }
 
-      @media all and (max-width: 1590px) {
+      @media all and (max-width: 1200px) {
         position: absolute;
         bottom: 0px;
         left: 50%;
@@ -412,6 +457,10 @@ $struct: 90%;
       }
       @media all and (max-width: 1274px) {
         width: 300px;
+      }
+
+      @media all and (max-height: 787px) {
+        width: 25%;
       }
 
       @media all and (max-width: 427px) {
@@ -439,7 +488,7 @@ $struct: 90%;
         @media all and (max-width: 1968px) {
           width: 180px;
         }
-        @media all and (max-width: 1590px) {
+        @media all and (max-width: 1200px) {
           width: 150px;
         }
         @media all and (max-width: 758px) {
@@ -452,7 +501,7 @@ $struct: 90%;
           @media all and (max-width: 1968px) {
             width: 40px;
           }
-          @media all and (max-width: 1590px) {
+          @media all and (max-width: 1200px) {
             width: 35px;
           }
 
@@ -821,7 +870,7 @@ $struct: 90%;
 
 .lottie_bird {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 30%;
   left: 50%;
   transform: translateX(-50%) translateY(-115%);

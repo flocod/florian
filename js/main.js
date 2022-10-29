@@ -117,8 +117,8 @@ $("body").on("click", "#theme_switcher", () => {
 let last_left_position;
 function makeNewPosition() {
   // Get viewport dimensions (remove the dimension of the div)
-  let h = $(window).height() - $(".moving_shape1").height();
-  let w = $(window).width() - $(".moving_shape1").width();
+  let h = window.innerHeight - $(".moving_shape1").height();
+  let w = window.innerWidth - $(".moving_shape1").width();
 
   let nh = Math.floor(Math.random() * h);
   let nw = Math.floor(Math.random() * w);
@@ -128,8 +128,8 @@ function makeNewPosition() {
 }
 function makeNewPosition2() {
   // Get viewport dimensions (remove the dimension of the div)
-  let h = $(window).height();
-  let w = $(window).width();
+  let h = window.innerHeight - $("#lottie_bird").height();
+  let w = window.innerWidth - $("#lottie_bird").width();
 
   let nh = Math.floor(Math.random() * h);
   let nw = Math.floor(Math.random() * w);
@@ -195,6 +195,9 @@ $(window).on("mousemove", function moveContain_cursor(e) {
     $("#lottie_bird").removeClass("bird_back");
   }
 
+
+
+
   TweenLite.to("#lottie_bird", 1, {
     css: {
       left: e.clientX,
@@ -204,3 +207,34 @@ $(window).on("mousemove", function moveContain_cursor(e) {
 
   last_left_position = e.clientX;
 });
+
+
+function progress_doc() {
+  let progress_state;
+  $(document).ready(function () {
+    totalheight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function () {
+      progress = (window.pageYOffset / totalheight) * 100;
+      progress = Math.round(Number(progress));
+      progress = progress + "%";
+      header = $(".header");
+
+      if (progress_state < progress) {
+        $(".header").addClass("header_shade");
+        $("#lottie_bird").fadeOut();
+
+        console.log("scroll to bottom");
+      } else if (window.pageYOffset == 0) {
+        $(".header").removeClass("header_shade");
+        $("#lottie_bird").fadeIn();
+        // if (window.innerWidth > 1000) {
+        //   $(".scroll_indice").css("display", "flex");
+        // }
+      }
+
+      progress_state = progress;
+    };
+  });
+}
+
+progress_doc();

@@ -42,6 +42,12 @@ $struct: 90%;
   width: 100%;
   margin-top: 100px;
   margin-bottom: 100px;
+
+  @media all and (max-width: 503px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
   &__struct {
     display: flex;
     flex-direction: column;
@@ -55,6 +61,12 @@ $struct: 90%;
       justify-content: space-between;
       align-items: flex-end;
       width: 100%;
+
+      @media all and (max-width: 1074px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .left {
         .experience {
           display: block;
@@ -65,6 +77,12 @@ $struct: 90%;
             letter-spacing: 0em;
             text-align: left;
             color: var(--text);
+            @media all and (max-width: 1417px) {
+              font-size: 3.5em;
+            }
+            @media all and (max-width: 545px) {
+              font-size: 3em;
+            }
           }
 
           .t2 {
@@ -74,6 +92,9 @@ $struct: 90%;
             letter-spacing: 0em;
             text-align: left;
             color: var(--text);
+            @media all and (max-width: 545px) {
+              font-size: 2.5em;
+            }
           }
         }
       }
@@ -81,6 +102,16 @@ $struct: 90%;
       .right {
         text-align: left;
         width: 40%;
+
+        @media all and (max-width: 1074px) {
+          margin-top: 50px;
+          width: 100%;
+        }
+
+        @media all and (max-width: 545px) {
+          margin-top: 30px;
+        }
+
         .experience_text {
           font-family: "italia";
           font-weight: 600;
@@ -88,6 +119,14 @@ $struct: 90%;
           letter-spacing: 0em;
           text-align: left;
           color: var(--text);
+
+          @media all and (max-width: 1417px) {
+            font-size: 3.5em;
+          }
+
+          @media all and (max-width: 545px) {
+            font-size: 2.5em;
+          }
 
           .btn {
             display: inline-flex;
@@ -107,21 +146,35 @@ $struct: 90%;
       flex-wrap: wrap;
       width: 100%;
       margin-top: 50px;
+
+      @media all and (max-width: 503px) {
+        margin-top: 50px;
+      }
+
       .project {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         width: 32%;
-        height: 461px;
+        height: 550px;
         background-size: cover;
+        // background-size: 200%;
+        background-origin: content-box;
         background-position: center;
         background-repeat: no-repeat;
         overflow: hidden;
         border-radius: 12px;
-        margin-top: 30px;
+        margin-bottom: 30px;
+        filter: saturate(100%);
+        @media all and (max-width: 1417px) {
+          width: 48%;
+        }
 
-        
+        @media all and (max-width: 952px) {
+          width: 100%;
+          height: auto;
+        }
 
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
         .project_struct {
@@ -133,11 +186,23 @@ $struct: 90%;
           align-items: center;
           align-content: space-between;
 
-          transform: translateX(-110%);
+          transform: translateY(110%);
           transition: 0.3s;
+          opacity: 0;
+
+          @media all and (max-width: 952px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+
+          @media all and (max-width: 503px) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+
           .desc {
             width: calc(100%);
-            height: 85%;
+            height: 88%;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -145,21 +210,26 @@ $struct: 90%;
             border-radius: 12px;
             // background: transparent;
             /* Note: currently only Safari supports backdrop-filter */
-            backdrop-filter: blur(30px);
-            --webkit-backdrop-filter: blur(30px);
-    
-            background: #{'rgba(var(--text_rgb), 0.7)'};
+            // backdrop-filter: blur(8px);
+            // --webkit-backdrop-filter: blur(8px);
+
+            background: #{"rgba(var(--fond_rgb), 1)"};
             /* (plus shape's fill blended on top as a separate layer with 61% opacity) */
 
             .des_struct {
               width: 90%;
               margin-top: 30px;
+
+              @media all and (max-width: 952px) {
+                margin-bottom: 30px;
+              }
+
               .name_project {
                 font-family: "Segoe UI";
                 font-weight: bold;
                 font-size: 22px;
                 text-align: left;
-                color: var(--fond);
+                color: var(--text);
               }
 
               .date_project {
@@ -167,19 +237,56 @@ $struct: 90%;
                 font-weight: normal;
                 font-size: 20px;
                 text-align: left;
-                color: var(--fond);
+                color: var(--text);
                 opacity: 0.9;
                 margin-top: 10px;
                 margin-bottom: 10px;
+
+                @media all and (max-width: 452px) {
+                  font-size: 1em;
+                  font-family: "Poppins";
+                }
               }
 
               .desc_project {
-                font-family:"Segoe UI";
+                font-family: "Segoe UI";
                 font-weight: 300;
                 font-size: 20px;
                 text-align: left;
-                color: var(--fond);
+                color: var(--text);
                 opacity: 0.9;
+
+                @media all and (max-width: 1543px) {
+                  font-size: 1.2em;
+                }
+
+                @media all and (max-width: 512px) {
+                  font-size: 1em;
+                  font-family: "Poppins";
+                }
+                @media all and (max-width: 452px) {
+                  font-size: 0.9em;
+                  font-family: "Poppins";
+                }
+
+                .stack_project {
+                  margin-top: 20px;
+                  .stack {
+                    display: inline-block;
+                    padding: 10px 15px;
+                    border-radius: 20px;
+                    color: var(--fond);
+                    background: var(--text);
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 14px;
+                    margin-bottom: 7px;
+                    @media all and (max-width: 452px) {
+                      font-size: 0.9em;
+                      font-family: "Poppins";
+                    }
+                  }
+                }
               }
             }
           }
@@ -187,44 +294,54 @@ $struct: 90%;
           .link_project {
             display: flex;
             justify-content: center;
-  
+            cursor: pointer;
             align-items: center;
             width: 100%;
-            height: 20%;
+            height: 17%;
             margin-top: 10px;
             border-radius: 12px;
-            background: #16161d2c;
             font-size: 20px;
-            color: var(--fond);
+          
             /* Note: currently only Safari supports backdrop-filter */
-            backdrop-filter: blur(30px);
-            --webkit-backdrop-filter: blur(30px);
-            background: #{'rgba(var(--text_rgb), 0.7)'};
+            // backdrop-filter: blur(30px);
+            // --webkit-backdrop-filter: blur(30px);
+            color: var(--text);
+            background: var(--fond);
             /* (plus shape's fill blended on top as a separate layer with 61% opacity) */
-
-            .ico{
-                display: inline-block;
-                margin-right: 20px;
-                
+            @media all and (max-width: 1543px) {
+              font-size: 1.2em;
             }
 
+            @media all and (max-width: 952px) {
+              padding-top: 20px;
+              padding-bottom: 20px;
+            }
+
+            @media all and (max-width: 512px) {
+              font-size: 1em;
+              font-family: "Poppins";
+            }
+
+            .ico {
+              display: inline-block;
+              margin-right: 20px;
+            }
           }
         }
 
-       
-      
+        transition: background-size 1s;
 
-        &:hover{
+        &:hover {
+          opacity: 1;
+
+          transition: 2s;
+
+          .project_struct {
             opacity: 1;
-
-            .project_struct{
-                transition: 0.3s;
-                transform: translateX(0%);
-            }
-
+            transition: 0.3s;
+            transform: translateX(0%);
+          }
         }
-
-
       }
     }
   }

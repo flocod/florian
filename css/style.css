@@ -108,6 +108,16 @@ Black 900
   scroll-behavior: smooth;
 }
 
+*::-moz-selection {
+  background: var(--text);
+  color: var(--fond);
+}
+
+*::selection {
+  background: var(--text);
+  color: var(--fond);
+}
+
 /*** scroollbar ***/
 *::-webkit-scrollbar {
   width: 0px;
@@ -149,8 +159,9 @@ a :hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: auto;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .header {
@@ -169,14 +180,11 @@ a :hover {
   left: 0px;
   padding: 10px 0;
   z-index: 11111;
-  background: rgba(var(--fond_rgb), 0.7);
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
-  mix-blend-mode: difference;
 }
 @media all and (max-width: 1000px) {
   .header {
-    top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .header .struct {
@@ -223,6 +231,13 @@ a :hover {
   cursor: pointer;
 }
 
+.header_shade {
+  background: rgba(var(--fond_rgb), 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  mix-blend-mode: difference;
+}
+
 .banderol {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,7 +262,7 @@ a :hover {
     right: 17%;
   }
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1200px) {
   .banderol {
     display: none;
     visibility: hidden;
@@ -328,6 +343,11 @@ a :hover {
   overflow: hidden;
   position: relative;
 }
+@media all and (max-width: 750px) {
+  .carousel {
+    height: calc(100vh - 50px);
+  }
+}
 .carousel .struct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,7 +362,7 @@ a :hover {
           justify-content: left;
   position: relative;
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1200px) {
   .carousel .struct {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -373,12 +393,12 @@ a :hover {
     width: 45%;
   }
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1200px) {
   .carousel .struct .carousel_intro {
     width: 100%;
   }
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1200px) {
   .carousel .struct .carousel_intro {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -399,16 +419,10 @@ a :hover {
     text-align: left;
   }
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1391px) {
   .carousel .struct .carousel_intro .text_big {
-    text-align: center;
     width: 100%;
-    font-size: 4.5em;
-  }
-}
-@media all and (max-width: 1274px) {
-  .carousel .struct .carousel_intro .text_big {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 }
 @media all and (max-width: 1000px) {
@@ -419,6 +433,11 @@ a :hover {
 @media all and (max-width: 758px) {
   .carousel .struct .carousel_intro .text_big {
     margin-bottom: 200px;
+  }
+}
+@media all and (max-height: 787px) {
+  .carousel .struct .carousel_intro .text_big {
+    line-height: 1.3em;
   }
 }
 @media all and (max-width: 543px) {
@@ -455,6 +474,11 @@ a :hover {
     display: none;
   }
 }
+@media all and (max-height: 787px) {
+  .carousel .struct .carousel_intro .carousel_intro_desc {
+    margin-top: 20px;
+  }
+}
 .carousel .struct .carousel_intro .carousel_intro_desc .text {
   width: 285px;
   margin-bottom: 8px;
@@ -476,7 +500,7 @@ a :hover {
     width: 33%;
   }
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1200px) {
   .carousel .struct .carousel_image {
     position: absolute;
     bottom: 0px;
@@ -489,6 +513,11 @@ a :hover {
 @media all and (max-width: 1274px) {
   .carousel .struct .carousel_image {
     width: 300px;
+  }
+}
+@media all and (max-height: 787px) {
+  .carousel .struct .carousel_image {
+    width: 25%;
   }
 }
 @media all and (max-width: 427px) {
@@ -528,7 +557,7 @@ a :hover {
     width: 180px;
   }
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1200px) {
   .carousel .struct .bar_outils .socials_icons {
     width: 150px;
   }
@@ -551,7 +580,7 @@ a :hover {
     width: 40px;
   }
 }
-@media all and (max-width: 1590px) {
+@media all and (max-width: 1200px) {
   .carousel .struct .bar_outils .socials_icons .icon {
     width: 35px;
   }
@@ -1026,7 +1055,7 @@ a :hover {
 }
 .lottie_bird {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 30%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-115%);
@@ -1100,6 +1129,12 @@ a :hover {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+@media all and (max-width: 503px) {
+  .group {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
 .group__struct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1132,6 +1167,17 @@ a :hover {
           align-items: flex-end;
   width: 100%;
 }
+@media all and (max-width: 1074px) {
+  .group__struct__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 .group__struct__title .left .experience {
   display: block;
 }
@@ -1143,6 +1189,16 @@ a :hover {
   text-align: left;
   color: var(--text);
 }
+@media all and (max-width: 1417px) {
+  .group__struct__title .left .experience .t1 {
+    font-size: 3.5em;
+  }
+}
+@media all and (max-width: 545px) {
+  .group__struct__title .left .experience .t1 {
+    font-size: 3em;
+  }
+}
 .group__struct__title .left .experience .t2 {
   font-family: Roboto;
   font-weight: 300;
@@ -1151,9 +1207,25 @@ a :hover {
   text-align: left;
   color: var(--text);
 }
+@media all and (max-width: 545px) {
+  .group__struct__title .left .experience .t2 {
+    font-size: 2.5em;
+  }
+}
 .group__struct__title .right {
   text-align: left;
   width: 40%;
+}
+@media all and (max-width: 1074px) {
+  .group__struct__title .right {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+@media all and (max-width: 545px) {
+  .group__struct__title .right {
+    margin-top: 30px;
+  }
 }
 .group__struct__title .right .experience_text {
   font-family: "italia";
@@ -1162,6 +1234,16 @@ a :hover {
   letter-spacing: 0em;
   text-align: left;
   color: var(--text);
+}
+@media all and (max-width: 1417px) {
+  .group__struct__title .right .experience_text {
+    font-size: 3.5em;
+  }
+}
+@media all and (max-width: 545px) {
+  .group__struct__title .right .experience_text {
+    font-size: 2.5em;
+  }
 }
 .group__struct__title .right .experience_text .btn {
   display: -webkit-inline-box;
@@ -1189,6 +1271,11 @@ a :hover {
   width: 100%;
   margin-top: 50px;
 }
+@media all and (max-width: 503px) {
+  .group__struct__container {
+    margin-top: 50px;
+  }
+}
 .group__struct__container .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1204,15 +1291,31 @@ a :hover {
       -ms-flex-align: center;
           align-items: center;
   width: 32%;
-  height: 461px;
+  height: 550px;
   background-size: cover;
+  background-origin: content-box;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
   border-radius: 12px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-transition: background-size 1s;
+  transition: background-size 1s;
+}
+@media all and (max-width: 1417px) {
+  .group__struct__container .project {
+    width: 48%;
+  }
+}
+@media all and (max-width: 952px) {
+  .group__struct__container .project {
+    width: 100%;
+    height: auto;
+  }
 }
 .group__struct__container .project .project_struct {
   height: 95%;
@@ -1232,14 +1335,27 @@ a :hover {
           align-items: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  -webkit-transform: translateX(-110%);
-          transform: translateX(-110%);
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  opacity: 0;
+}
+@media all and (max-width: 952px) {
+  .group__struct__container .project .project_struct {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media all and (max-width: 503px) {
+  .group__struct__container .project .project_struct {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 .group__struct__container .project .project_struct .desc {
   width: 100%;
-  height: 85%;
+  height: 88%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1251,40 +1367,85 @@ a :hover {
           align-items: flex-start;
   border-radius: 12px;
   /* Note: currently only Safari supports backdrop-filter */
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
-  --webkit-backdrop-filter: blur(30px);
-  background: rgba(var(--text_rgb), 0.7);
+  background: rgba(var(--fond_rgb), 1);
   /* (plus shape's fill blended on top as a separate layer with 61% opacity) */
 }
 .group__struct__container .project .project_struct .desc .des_struct {
   width: 90%;
   margin-top: 30px;
 }
+@media all and (max-width: 952px) {
+  .group__struct__container .project .project_struct .desc .des_struct {
+    margin-bottom: 30px;
+  }
+}
 .group__struct__container .project .project_struct .desc .des_struct .name_project {
   font-family: "Segoe UI";
   font-weight: bold;
   font-size: 22px;
   text-align: left;
-  color: var(--fond);
+  color: var(--text);
 }
 .group__struct__container .project .project_struct .desc .des_struct .date_project {
   font-family: "Segoe UI";
   font-weight: normal;
   font-size: 20px;
   text-align: left;
-  color: var(--fond);
+  color: var(--text);
   opacity: 0.9;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+@media all and (max-width: 452px) {
+  .group__struct__container .project .project_struct .desc .des_struct .date_project {
+    font-size: 1em;
+    font-family: "Poppins";
+  }
 }
 .group__struct__container .project .project_struct .desc .des_struct .desc_project {
   font-family: "Segoe UI";
   font-weight: 300;
   font-size: 20px;
   text-align: left;
-  color: var(--fond);
+  color: var(--text);
   opacity: 0.9;
+}
+@media all and (max-width: 1543px) {
+  .group__struct__container .project .project_struct .desc .des_struct .desc_project {
+    font-size: 1.2em;
+  }
+}
+@media all and (max-width: 512px) {
+  .group__struct__container .project .project_struct .desc .des_struct .desc_project {
+    font-size: 1em;
+    font-family: "Poppins";
+  }
+}
+@media all and (max-width: 452px) {
+  .group__struct__container .project .project_struct .desc .des_struct .desc_project {
+    font-size: 0.9em;
+    font-family: "Poppins";
+  }
+}
+.group__struct__container .project .project_struct .desc .des_struct .desc_project .stack_project {
+  margin-top: 20px;
+}
+.group__struct__container .project .project_struct .desc .des_struct .desc_project .stack_project .stack {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: var(--fond);
+  background: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 7px;
+}
+@media all and (max-width: 452px) {
+  .group__struct__container .project .project_struct .desc .des_struct .desc_project .stack_project .stack {
+    font-size: 0.9em;
+    font-family: "Poppins";
+  }
 }
 .group__struct__container .project .project_struct .link_project {
   display: -webkit-box;
@@ -1293,22 +1454,36 @@ a :hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 20%;
+  height: 17%;
   margin-top: 10px;
   border-radius: 12px;
-  background: rgba(22, 22, 29, 0.1725490196);
   font-size: 20px;
-  color: var(--fond);
   /* Note: currently only Safari supports backdrop-filter */
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
-  --webkit-backdrop-filter: blur(30px);
-  background: rgba(var(--text_rgb), 0.7);
+  color: var(--text);
+  background: var(--fond);
   /* (plus shape's fill blended on top as a separate layer with 61% opacity) */
+}
+@media all and (max-width: 1543px) {
+  .group__struct__container .project .project_struct .link_project {
+    font-size: 1.2em;
+  }
+}
+@media all and (max-width: 952px) {
+  .group__struct__container .project .project_struct .link_project {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media all and (max-width: 512px) {
+  .group__struct__container .project .project_struct .link_project {
+    font-size: 1em;
+    font-family: "Poppins";
+  }
 }
 .group__struct__container .project .project_struct .link_project .ico {
   display: inline-block;
@@ -1316,8 +1491,11 @@ a :hover {
 }
 .group__struct__container .project:hover {
   opacity: 1;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 .group__struct__container .project:hover .project_struct {
+  opacity: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-transform: translateX(0%);
