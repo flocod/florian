@@ -74,7 +74,7 @@ Black 900
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   background: var(--fond);
   color: var(--text);
   font-family: "Poppins", sans-serif;
@@ -247,7 +247,7 @@ $struct: 90%;
   right: 20%;
   color: var(--fond);
   overflow: hidden;
-  z-index: 21111;
+  z-index: 1111;
   @media all and (max-width: 1496px) {
     width: 7.5em;
     right: 17%;

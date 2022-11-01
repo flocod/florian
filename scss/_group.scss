@@ -40,8 +40,8 @@ $struct: 90%;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-bottom: 0px;
 
   @media all and (max-width: 503px) {
     margin-top: 50px;
@@ -68,33 +68,34 @@ $struct: 90%;
       }
 
       .left {
-        .experience {
-          display: block;
-          .t1 {
-            font-family: "italia";
-            font-weight: 600;
-            font-size: 112px;
-            letter-spacing: 0em;
-            text-align: left;
-            color: var(--text);
-            @media all and (max-width: 1417px) {
-              font-size: 3.5em;
-            }
-            @media all and (max-width: 545px) {
-              font-size: 3em;
-            }
-          }
+      }
 
-          .t2 {
-            font-family: Roboto;
-            font-weight: 300;
-            font-size: 49px;
-            letter-spacing: 0em;
-            text-align: left;
-            color: var(--text);
-            @media all and (max-width: 545px) {
-              font-size: 2.5em;
-            }
+      .experience {
+        display: block;
+        .t1 {
+          font-family: "italia";
+          font-weight: 600;
+          font-size: 112px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: var(--text);
+          @media all and (max-width: 1417px) {
+            font-size: 3.5em;
+          }
+          @media all and (max-width: 545px) {
+            font-size: 3em;
+          }
+        }
+
+        .t2 {
+          font-family: Roboto;
+          font-weight: 300;
+          font-size: 49px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: var(--text);
+          @media all and (max-width: 545px) {
+            font-size: 2.5em;
           }
         }
       }
@@ -111,29 +112,31 @@ $struct: 90%;
         @media all and (max-width: 545px) {
           margin-top: 30px;
         }
+      }
 
-        .experience_text {
-          font-family: "italia";
-          font-weight: 600;
-          font-size: 80px;
-          letter-spacing: 0em;
-          text-align: left;
-          color: var(--text);
+      .experience_text {
+        font-family: "italia";
+        font-weight: 600;
+        font-size: 80px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: var(--text);
 
-          @media all and (max-width: 1417px) {
-            font-size: 3.5em;
-          }
+        @media all and (max-width: 1417px) {
+          font-size: 3.5em;
+        }
 
-          @media all and (max-width: 545px) {
-            font-size: 2.5em;
-          }
+        @media all and (max-width: 545px) {
+          font-size: 2.5em;
+        }
 
-          .btn {
+        .btn {
+          display: inline-flex;
+          font-size: initial;
+          transform: translateY(-30%);
+          margin-top: 20px;
+          .btn_ic {
             display: inline-flex;
-            font-size: initial;
-            .btn_ic {
-              display: inline-flex;
-            }
           }
         }
       }
@@ -301,7 +304,7 @@ $struct: 90%;
             margin-top: 10px;
             border-radius: 12px;
             font-size: 20px;
-          
+
             /* Note: currently only Safari supports backdrop-filter */
             // backdrop-filter: blur(30px);
             // --webkit-backdrop-filter: blur(30px);
@@ -343,6 +346,114 @@ $struct: 90%;
           }
         }
       }
+    }
+  }
+}
+
+.group_experience {
+  .left {
+    width: 50%;
+  }
+
+  .group_experience_detail {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.2em;
+    font-family: "Poppins";
+    font-weight: 400;
+    width: 80%;
+  }
+
+  .btn_cv_download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 362px;
+    height: 93px;
+    border-radius: 10px;
+    background: var(--fond);
+    box-shadow: -4px 4px 1px var(--text);
+    border: 1px solid var(--text);
+    color: var(--text);
+    font-size: 0.35em;
+    font-family: "Poppins";
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-sizing: border-box;
+    box-shadow: -4px 4px 1px var(--text);
+    &:hover {
+      background: var(--text);
+      color: var(--fond);
+      box-shadow: -4px 4px 1px var(--fond);
+      border: 1px solid var(--fond);
+      transition: 0.3s;
+    }
+  }
+
+  .container_experience {
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+    .experience_item {
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      border-top: 2px solid #{'rgba(var(--text_rgb), .5)'};
+   
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: var(--text);
+      &:last-child{
+        border-bottom: 2px solid #{'rgba(var(--text_rgb), .5)'};
+      }
+
+     
+
+      .enterprise{
+        text-align: left;
+      }
+
+      .experience_detail{
+        text-align: right;
+      }
+
+      .experience_detail_little {
+        font-family: Roboto;
+        font-weight: normal;
+        font-size: 28px;
+        letter-spacing: 0em;
+        line-height: 42px;
+        font-style: oblique;
+      
+      }
+
+      .experience_detail_big {
+        font-family: "Italian Plate No1";
+        font-weight: 600;
+        font-size: 45px;
+        letter-spacing: 0em;
+        // line-height: 98px;
+      
+        
+      }
+
+      .poste {
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: 30px;
+        letter-spacing: 0em;
+        line-height: 40px;
+     
+        
+      }
+
+      .date{
+        margin-bottom: 30px;
+      }
+
     }
   }
 }

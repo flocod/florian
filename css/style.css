@@ -57,7 +57,6 @@ Black 900
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  overflow-y: hidden;
   background: var(--fond);
   color: var(--text);
   font-family: "Poppins", sans-serif;
@@ -252,7 +251,7 @@ a :hover {
   right: 20%;
   color: var(--fond);
   overflow: hidden;
-  z-index: 21111;
+  z-index: 1111;
 }
 @media all and (max-width: 1496px) {
   .banderol {
@@ -1131,8 +1130,8 @@ a :hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-bottom: 0px;
 }
 @media all and (max-width: 503px) {
   .group {
@@ -1183,10 +1182,10 @@ a :hover {
             align-items: flex-start;
   }
 }
-.group__struct__title .left .experience {
+.group__struct__title .experience {
   display: block;
 }
-.group__struct__title .left .experience .t1 {
+.group__struct__title .experience .t1 {
   font-family: "italia";
   font-weight: 600;
   font-size: 112px;
@@ -1195,16 +1194,16 @@ a :hover {
   color: var(--text);
 }
 @media all and (max-width: 1417px) {
-  .group__struct__title .left .experience .t1 {
+  .group__struct__title .experience .t1 {
     font-size: 3.5em;
   }
 }
 @media all and (max-width: 545px) {
-  .group__struct__title .left .experience .t1 {
+  .group__struct__title .experience .t1 {
     font-size: 3em;
   }
 }
-.group__struct__title .left .experience .t2 {
+.group__struct__title .experience .t2 {
   font-family: Roboto;
   font-weight: 300;
   font-size: 49px;
@@ -1213,7 +1212,7 @@ a :hover {
   color: var(--text);
 }
 @media all and (max-width: 545px) {
-  .group__struct__title .left .experience .t2 {
+  .group__struct__title .experience .t2 {
     font-size: 2.5em;
   }
 }
@@ -1232,7 +1231,7 @@ a :hover {
     margin-top: 30px;
   }
 }
-.group__struct__title .right .experience_text {
+.group__struct__title .experience_text {
   font-family: "italia";
   font-weight: 600;
   font-size: 80px;
@@ -1241,22 +1240,25 @@ a :hover {
   color: var(--text);
 }
 @media all and (max-width: 1417px) {
-  .group__struct__title .right .experience_text {
+  .group__struct__title .experience_text {
     font-size: 3.5em;
   }
 }
 @media all and (max-width: 545px) {
-  .group__struct__title .right .experience_text {
+  .group__struct__title .experience_text {
     font-size: 2.5em;
   }
 }
-.group__struct__title .right .experience_text .btn {
+.group__struct__title .experience_text .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: initial;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  margin-top: 20px;
 }
-.group__struct__title .right .experience_text .btn .btn_ic {
+.group__struct__title .experience_text .btn .btn_ic {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1505,4 +1507,107 @@ a :hover {
   transition: 0.3s;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+.group_experience .left {
+  width: 50%;
+}
+.group_experience .group_experience_detail {
+  display: block;
+  margin-top: 25px;
+  font-size: 0.2em;
+  font-family: "Poppins";
+  font-weight: 400;
+  width: 80%;
+}
+.group_experience .btn_cv_download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 362px;
+  height: 93px;
+  border-radius: 10px;
+  background: var(--fond);
+  -webkit-box-shadow: -4px 4px 1px var(--text);
+          box-shadow: -4px 4px 1px var(--text);
+  border: 1px solid var(--text);
+  color: var(--text);
+  font-size: 0.35em;
+  font-family: "Poppins";
+  margin-top: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  box-shadow: -4px 4px 1px var(--text);
+}
+.group_experience .btn_cv_download:hover {
+  background: var(--text);
+  color: var(--fond);
+  -webkit-box-shadow: -4px 4px 1px var(--fond);
+          box-shadow: -4px 4px 1px var(--fond);
+  border: 1px solid var(--fond);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.group_experience .container_experience {
+  display: block;
+  width: 100%;
+  margin-top: 80px;
+}
+.group_experience .container_experience .experience_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  border-top: 2px solid rgba(var(--text_rgb), .5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--text);
+}
+.group_experience .container_experience .experience_item:last-child {
+  border-bottom: 2px solid rgba(var(--text_rgb), .5);
+}
+.group_experience .container_experience .experience_item .enterprise {
+  text-align: left;
+}
+.group_experience .container_experience .experience_item .experience_detail {
+  text-align: right;
+}
+.group_experience .container_experience .experience_item .experience_detail_little {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 28px;
+  letter-spacing: 0em;
+  line-height: 42px;
+  font-style: oblique;
+}
+.group_experience .container_experience .experience_item .experience_detail_big {
+  font-family: "Italian Plate No1";
+  font-weight: 600;
+  font-size: 45px;
+  letter-spacing: 0em;
+}
+.group_experience .container_experience .experience_item .poste {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 30px;
+  letter-spacing: 0em;
+  line-height: 40px;
+}
+.group_experience .container_experience .experience_item .date {
+  margin-bottom: 30px;
 }
