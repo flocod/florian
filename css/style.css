@@ -1136,7 +1136,7 @@ a :hover {
 @media all and (max-width: 503px) {
   .group {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
 }
 .group__struct {
@@ -1512,6 +1512,11 @@ a :hover {
 .group_experience .left {
   width: 50%;
 }
+@media all and (max-width: 1074px) {
+  .group_experience .left {
+    width: 100%;
+  }
+}
 .group_experience .group_experience_detail {
   display: block;
   margin-top: 25px;
@@ -1519,6 +1524,51 @@ a :hover {
   font-family: "Poppins";
   font-weight: 400;
   width: 80%;
+}
+@media all and (max-width: 1417px) {
+  .group_experience .group_experience_detail {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 1074px) {
+  .group_experience .group_experience_detail {
+    width: 100%;
+  }
+}
+@media all and (max-width: 545px) {
+  .group_experience .group_experience_detail {
+    font-size: 0.85rem;
+  }
+}
+.group_experience .image_experience {
+  width: 100%;
+}
+@media all and (max-width: 1074px) {
+  .group_experience .image_experience {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+  }
+}
+.group_experience .image_experience img {
+  width: 100%;
+}
+@media all and (max-width: 1074px) {
+  .group_experience .image_experience img {
+    width: 60%;
+  }
+}
+@media all and (max-width: 545px) {
+  .group_experience .image_experience img {
+    width: 100%;
+  }
 }
 .group_experience .btn_cv_download {
   display: -webkit-box;
@@ -1557,6 +1607,20 @@ a :hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media all and (max-width: 1417px) {
+  .group_experience .btn_cv_download {
+    width: 262px;
+    height: 73px;
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 545px) {
+  .group_experience .btn_cv_download {
+    width: 100%;
+    height: 73px;
+    font-size: 1.1rem;
+  }
+}
 .group_experience .container_experience {
   display: block;
   width: 100%;
@@ -1583,6 +1647,7 @@ a :hover {
 }
 .group_experience .container_experience .experience_item .enterprise {
   text-align: left;
+  font-family: Poppins;
 }
 .group_experience .container_experience .experience_item .experience_detail {
   text-align: right;
@@ -1595,11 +1660,31 @@ a :hover {
   line-height: 42px;
   font-style: oblique;
 }
+@media all and (max-width: 1000px) {
+  .group_experience .container_experience .experience_item .experience_detail_little {
+    font-size: 1em;
+  }
+}
+@media all and (max-width: 500px) {
+  .group_experience .container_experience .experience_item .experience_detail_little {
+    line-height: normal;
+  }
+}
 .group_experience .container_experience .experience_item .experience_detail_big {
-  font-family: "Italian Plate No1";
+  font-family: "italia";
   font-weight: 600;
   font-size: 45px;
   letter-spacing: 0em;
+}
+@media all and (max-width: 1000px) {
+  .group_experience .container_experience .experience_item .experience_detail_big {
+    font-size: 1.5em;
+  }
+}
+@media all and (max-width: 660px) {
+  .group_experience .container_experience .experience_item .experience_detail_big {
+    font-size: 1.2em;
+  }
 }
 .group_experience .container_experience .experience_item .poste {
   font-family: Roboto;
@@ -1608,6 +1693,36 @@ a :hover {
   letter-spacing: 0em;
   line-height: 40px;
 }
+@media all and (max-width: 1000px) {
+  .group_experience .container_experience .experience_item .poste {
+    font-size: 1em;
+    line-height: normal;
+  }
+}
+@media all and (max-width: 660px) {
+  .group_experience .container_experience .experience_item .poste {
+    font-size: 0.8em;
+  }
+}
+@media all and (max-width: 500px) {
+  .group_experience .container_experience .experience_item .poste {
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: 17px;
+    font-weight: normal;
+  }
+}
 .group_experience .container_experience .experience_item .date {
   margin-bottom: 30px;
+}
+@media all and (max-width: 1000px) {
+  .group_experience .container_experience .experience_item .date {
+    margin-bottom: 8px;
+  }
+}
+@media all and (max-width: 500px) {
+  .group_experience .container_experience .experience_item .hours {
+    font-size: 12px;
+    font-weight: 600;
+  }
 }

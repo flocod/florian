@@ -45,7 +45,7 @@ $struct: 90%;
 
   @media all and (max-width: 503px) {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
 
   &__struct {
@@ -353,6 +353,9 @@ $struct: 90%;
 .group_experience {
   .left {
     width: 50%;
+    @media all and (max-width: 1074px) {
+      width: 100%;
+    }
   }
 
   .group_experience_detail {
@@ -362,6 +365,37 @@ $struct: 90%;
     font-family: "Poppins";
     font-weight: 400;
     width: 80%;
+
+    @media all and (max-width: 1417px) {
+      font-size: 1rem;
+    }
+
+    @media all and (max-width: 1074px) {
+      width: 100%;
+    }
+    @media all and (max-width: 545px) {
+      font-size: 0.85rem;
+    }
+  }
+
+  .image_experience {
+    width: 100%;
+    @media all and (max-width: 1074px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 100%;
+      @media all and (max-width: 1074px) {
+        width: 60%;
+      }
+      @media all and (max-width: 545px) {
+        width: 100%;
+      }
+    }
   }
 
   .btn_cv_download {
@@ -389,6 +423,17 @@ $struct: 90%;
       border: 1px solid var(--fond);
       transition: 0.3s;
     }
+
+    @media all and (max-width: 1417px) {
+      width: 262px;
+      height: 73px;
+      font-size: 1rem;
+    }
+    @media all and (max-width: 545px) {
+      width: 100%;
+      height: 73px;
+      font-size: 1.1rem;
+    }
   }
 
   .container_experience {
@@ -396,28 +441,27 @@ $struct: 90%;
     width: 100%;
     margin-top: 80px;
     .experience_item {
-      
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       width: 100%;
-      border-top: 2px solid #{'rgba(var(--text_rgb), .5)'};
-   
+      border-top: 2px solid #{"rgba(var(--text_rgb), .5)"};
+
       padding-top: 20px;
       padding-bottom: 20px;
       color: var(--text);
-      &:last-child{
-        border-bottom: 2px solid #{'rgba(var(--text_rgb), .5)'};
+      &:last-child {
+        border-bottom: 2px solid #{"rgba(var(--text_rgb), .5)"};
       }
 
-     
-
-      .enterprise{
+      .enterprise {
         text-align: left;
+        font-family: Poppins;
       }
 
-      .experience_detail{
+      .experience_detail {
         text-align: right;
+      
       }
 
       .experience_detail_little {
@@ -427,17 +471,36 @@ $struct: 90%;
         letter-spacing: 0em;
         line-height: 42px;
         font-style: oblique;
-      
+        
+        @media all and (max-width: 1000px){
+          font-size: 1em;
+
+        }
+
+        @media all and (max-width: 500px){
+         
+          line-height: normal;
+          
+          
+        }
+
       }
 
       .experience_detail_big {
-        font-family: "Italian Plate No1";
+        font-family: "italia";
         font-weight: 600;
         font-size: 45px;
         letter-spacing: 0em;
         // line-height: 98px;
-      
-        
+
+
+        @media all and (max-width: 1000px){
+          font-size: 1.5em;
+        }
+        @media all and (max-width: 660px){
+          font-size: 1.2em;
+        }
+
       }
 
       .poste {
@@ -446,12 +509,41 @@ $struct: 90%;
         font-size: 30px;
         letter-spacing: 0em;
         line-height: 40px;
-     
-        
+        @media all and (max-width: 1000px){
+          font-size: 1em;
+          line-height: normal;
+          // br{
+          //   display: none;
+          // }
+
+        }
+        @media all and (max-width: 660px){
+          font-size: .8em;
+        }
+        @media all and (max-width: 500px){
+          font-size: 14px;
+          margin-top: 4px;
+          line-height: 17px;
+          
+          font-weight: normal;
+        }
       }
 
-      .date{
+      .date {
         margin-bottom: 30px;
+        @media all and (max-width: 1000px){
+          margin-bottom: 8px;
+        }
+      }
+
+      .hours{
+        @media all and (max-width: 500px){
+         
+          font-size: 12px;
+          font-weight: 600;
+          
+          
+        }
       }
 
     }
