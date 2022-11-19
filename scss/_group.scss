@@ -454,14 +454,26 @@ $struct: 90%;
         border-bottom: 2px solid #{"rgba(var(--text_rgb), .5)"};
       }
 
+      @media all and (max-width: 366px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .enterprise {
         text-align: left;
         font-family: Poppins;
+        @media all and (max-width: 366px) {
+          text-align: center;
+          width: 100%;
+        }
       }
 
       .experience_detail {
         text-align: right;
-      
+        @media all and (max-width: 366px) {
+          text-align: center;
+          width: 100%;
+        }
       }
 
       .experience_detail_little {
@@ -471,19 +483,14 @@ $struct: 90%;
         letter-spacing: 0em;
         line-height: 42px;
         font-style: oblique;
-        
-        @media all and (max-width: 1000px){
+
+        @media all and (max-width: 1000px) {
           font-size: 1em;
-
         }
 
-        @media all and (max-width: 500px){
-         
+        @media all and (max-width: 500px) {
           line-height: normal;
-          
-          
         }
-
       }
 
       .experience_detail_big {
@@ -493,14 +500,12 @@ $struct: 90%;
         letter-spacing: 0em;
         // line-height: 98px;
 
-
-        @media all and (max-width: 1000px){
+        @media all and (max-width: 1000px) {
           font-size: 1.5em;
         }
-        @media all and (max-width: 660px){
+        @media all and (max-width: 660px) {
           font-size: 1.2em;
         }
-
       }
 
       .poste {
@@ -509,43 +514,318 @@ $struct: 90%;
         font-size: 30px;
         letter-spacing: 0em;
         line-height: 40px;
-        @media all and (max-width: 1000px){
+        @media all and (max-width: 1000px) {
           font-size: 1em;
           line-height: normal;
           // br{
           //   display: none;
           // }
-
         }
-        @media all and (max-width: 660px){
-          font-size: .8em;
+        @media all and (max-width: 660px) {
+          font-size: 0.8em;
         }
-        @media all and (max-width: 500px){
+        @media all and (max-width: 500px) {
           font-size: 14px;
           margin-top: 4px;
           line-height: 17px;
-          
+
           font-weight: normal;
         }
       }
 
       .date {
         margin-bottom: 30px;
-        @media all and (max-width: 1000px){
+        @media all and (max-width: 1000px) {
           margin-bottom: 8px;
         }
       }
 
-      .hours{
-        @media all and (max-width: 500px){
-         
+      .hours {
+        @media all and (max-width: 500px) {
           font-size: 12px;
           font-weight: 600;
-          
-          
+        }
+        @media all and (max-width: 366px) {
+          margin-top: 8px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+.groupcontact {
+  .groupcontact_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text);
+    .small {
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 25px;
+      letter-spacing: 0em;
+      text-align: left;
+      font-family: Poppins;
+      font-size: 2em;
+      margin-bottom: 10px;
+      @media all and (max-width: 1243px) {
+        font-size: 1.5em;
+      }
+
+      @media all and (max-width: 660px) {
+        font-size: 1em;
+      }
+    }
+
+    .titre {
+      width: 60%;
+      text-align: center;
+      font-family: "italia";
+      font-size: 4em;
+
+      @media all and (max-width: 1243px) {
+        font-size: 3em;
+        width: 100%;
+      }
+      @media all and (max-width: 660px) {
+        font-size: 2.5em;
+      }
+      @media all and (max-width: 500px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .contain_contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 50px;
+
+    @media all and (max-width: 500px) {
+      margin-top: 30px;
+    }
+
+    .contain_item {
+      width: 45%;
+      text-align: left;
+      font-family: "italia";
+
+      font-weight: 300;
+      font-size: 2em;
+      letter-spacing: 0em;
+      text-align: left;
+      color: var(--text);
+
+      @media all and (max-width: 1243px) {
+        font-size: 1.7em;
+        width: 100%;
+      }
+      @media all and (max-width: 660px) {
+        font-size: 1.4em;
+      }
+      @media all and (max-width: 639px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media all and (max-width: 500px) {
+        font-size: 1em;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      div {
+        margin-bottom: 10px;
+        text-transform: lowercase;
+        @media all and (max-width: 500px) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  .contain_contact_center {
+    justify-content: center;
+    .contain_item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      div {
+        display: inline-block;
+        text-align: center;
+      }
+    }
+  }
+
+  .contain_contact2 {
+    margin-top: 60px;
+
+    // &:last-child {
+    //   display: flex;
+    //   // justify-content:end;
+    // }
+
+    .contain_item {
+      img {
+        width: 50%;
+        @media all and (max-width: 639px) {
+          width: 80%;
         }
       }
 
+      &:last-child {
+        @media all and (max-width: 639px) {
+          display: none;
+        }
+      }
+
+      .experience_text {
+        font-family: "italia";
+        font-weight: 600;
+        font-size: 2.5em;
+        letter-spacing: 0em;
+        text-align: right;
+        color: var(--text);
+        text-transform: unset;
+
+        @media all and (max-width: 1417px) {
+          font-size: 1.5em;
+        }
+
+        @media all and (max-width: 545px) {
+          font-size: 0.8em;
+        }
+
+        .btn {
+          display: inline-flex;
+          font-size: initial;
+          transform: translateY(-30%);
+          margin-top: 20px;
+          .btn_ic {
+            display: inline-flex;
+          }
+        }
+      }
+    }
+  }
+
+  .menu_footer {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--text);
+    color: var(--text);
+
+    @media all and (max-width: 943px) {
+      font-size: 0.8em;
+    }
+
+    @media all and (max-width: 800px) {
+      flex-direction: column;
+      font-size: 1.2em;
+      padding-bottom: 10px;
+    }
+    @media all and (max-width: 360px) {
+      font-size: 0.8em;
+    }
+
+    &__contain {
+      display: flex;
+      width: 33%;
+      justify-content: space-between;
+      @media all and (max-width: 800px) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__item {
+        text-transform: uppercase;
+        @media all and (max-width: 943px) {
+          font-size: 0.8em;
+        }
+        @media all and (max-width: 800px) {
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .menu_footer__contain--sign {
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media all and (max-width: 800px) {
+      .menu_footer__contain--sign {
+        order: 3;
+      }
+    }
+  }
+}
+
+footer {
+  display: block;
+  width: 100%;
+  position: relative;
+  .banderol_footer {
+    display: block;
+ 
+    overflow: hidden;
+    width: max-content;
+   
+    .text {
+      font-family: "italia";
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 112px;
+      letter-spacing: 0em;
+      text-align: left;
+      word-break: keep-all;
+      color: var(--text);
+      
+      animation: scrollLeft 100s linear infinite;
+      white-space:nowrap;
+     
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      @media all and (max-width: 1000px) {
+       font-size: 3em;
+      }
+
+
+      span {
+        
+        &:nth-child(2n) {
+   
+          color: transparent;
+          -webkit-text-stroke-color: var(--text);
+          -webkit-text-stroke-width: 2px;
+          -moz-text-stroke-color: var(--text);
+          -moz-text-stroke-width: 2px;
+          -o-text-stroke-color: var(--text);
+          -o-text-stroke-width: 2px;
+          -ms-text-stroke-color: var(--text);
+          -ms-text-stroke-width: 2px;
+        }
+      }
+
+      @media all and (max-width: 800px) {
+        margin-top: 10px;
+      }
     }
   }
 }

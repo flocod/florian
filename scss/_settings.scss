@@ -324,6 +324,10 @@ $struct: 90%;
   }
 }
 
+.banderol_footer{
+
+}
+
 .carousel {
   display: flex;
   padding: 0 auto;
@@ -562,6 +566,26 @@ $struct: 90%;
     transform: translate(-55px, 55px);
   }
 }
+@keyframes scrollLeft {
+  // 0%,
+  // 100% {
+  //   transform: translateX(0px);
+  // }
+  // 50% {
+  //   transform: translate(-100%);
+  // }
+
+  from {
+    transform: translateX(1px);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+
 
 @keyframes swipeUp {
   // 0%{transform: translateY(0%);}

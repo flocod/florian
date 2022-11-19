@@ -637,6 +637,26 @@ a :hover {
             transform: translate(-55px, 55px);
   }
 }
+@-webkit-keyframes scrollLeft {
+  from {
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@keyframes scrollLeft {
+  from {
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
 @-webkit-keyframes swipeUp {
   from {
     -webkit-transform: translateY(0%);
@@ -1645,12 +1665,35 @@ a :hover {
 .group_experience .container_experience .experience_item:last-child {
   border-bottom: 2px solid rgba(var(--text_rgb), .5);
 }
+@media all and (max-width: 366px) {
+  .group_experience .container_experience .experience_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .group_experience .container_experience .experience_item .enterprise {
   text-align: left;
   font-family: Poppins;
 }
+@media all and (max-width: 366px) {
+  .group_experience .container_experience .experience_item .enterprise {
+    text-align: center;
+    width: 100%;
+  }
+}
 .group_experience .container_experience .experience_item .experience_detail {
   text-align: right;
+}
+@media all and (max-width: 366px) {
+  .group_experience .container_experience .experience_item .experience_detail {
+    text-align: center;
+    width: 100%;
+  }
 }
 .group_experience .container_experience .experience_item .experience_detail_little {
   font-family: Roboto;
@@ -1724,5 +1767,347 @@ a :hover {
   .group_experience .container_experience .experience_item .hours {
     font-size: 12px;
     font-weight: 600;
+  }
+}
+@media all and (max-width: 366px) {
+  .group_experience .container_experience .experience_item .hours {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.groupcontact .groupcontact_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--text);
+}
+.groupcontact .groupcontact_title .small {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+@media all and (max-width: 1243px) {
+  .groupcontact .groupcontact_title .small {
+    font-size: 1.5em;
+  }
+}
+@media all and (max-width: 660px) {
+  .groupcontact .groupcontact_title .small {
+    font-size: 1em;
+  }
+}
+.groupcontact .groupcontact_title .titre {
+  width: 60%;
+  text-align: center;
+  font-family: "italia";
+  font-size: 4em;
+}
+@media all and (max-width: 1243px) {
+  .groupcontact .groupcontact_title .titre {
+    font-size: 3em;
+    width: 100%;
+  }
+}
+@media all and (max-width: 660px) {
+  .groupcontact .groupcontact_title .titre {
+    font-size: 2.5em;
+  }
+}
+@media all and (max-width: 500px) {
+  .groupcontact .groupcontact_title .titre {
+    font-size: 1.5em;
+  }
+}
+.groupcontact .contain_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  margin-top: 50px;
+}
+@media all and (max-width: 500px) {
+  .groupcontact .contain_contact {
+    margin-top: 30px;
+  }
+}
+.groupcontact .contain_contact .contain_item {
+  width: 45%;
+  text-align: left;
+  font-family: "italia";
+  font-weight: 300;
+  font-size: 2em;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text);
+}
+@media all and (max-width: 1243px) {
+  .groupcontact .contain_contact .contain_item {
+    font-size: 1.7em;
+    width: 100%;
+  }
+}
+@media all and (max-width: 660px) {
+  .groupcontact .contain_contact .contain_item {
+    font-size: 1.4em;
+  }
+}
+@media all and (max-width: 639px) {
+  .groupcontact .contain_contact .contain_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media all and (max-width: 500px) {
+  .groupcontact .contain_contact .contain_item {
+    font-size: 1em;
+  }
+}
+.groupcontact .contain_contact .contain_item:last-child {
+  text-align: right;
+}
+.groupcontact .contain_contact .contain_item div {
+  margin-bottom: 10px;
+  text-transform: lowercase;
+}
+@media all and (max-width: 500px) {
+  .groupcontact .contain_contact .contain_item div {
+    margin-bottom: 5px;
+  }
+}
+.groupcontact .contain_contact_center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.groupcontact .contain_contact_center .contain_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.groupcontact .contain_contact_center .contain_item div {
+  display: inline-block;
+  text-align: center;
+}
+.groupcontact .contain_contact2 {
+  margin-top: 60px;
+}
+.groupcontact .contain_contact2 .contain_item img {
+  width: 50%;
+}
+@media all and (max-width: 639px) {
+  .groupcontact .contain_contact2 .contain_item img {
+    width: 80%;
+  }
+}
+@media all and (max-width: 639px) {
+  .groupcontact .contain_contact2 .contain_item:last-child {
+    display: none;
+  }
+}
+.groupcontact .contain_contact2 .contain_item .experience_text {
+  font-family: "italia";
+  font-weight: 600;
+  font-size: 2.5em;
+  letter-spacing: 0em;
+  text-align: right;
+  color: var(--text);
+  text-transform: unset;
+}
+@media all and (max-width: 1417px) {
+  .groupcontact .contain_contact2 .contain_item .experience_text {
+    font-size: 1.5em;
+  }
+}
+@media all and (max-width: 545px) {
+  .groupcontact .contain_contact2 .contain_item .experience_text {
+    font-size: 0.8em;
+  }
+}
+.groupcontact .contain_contact2 .contain_item .experience_text .btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: initial;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  margin-top: 20px;
+}
+.groupcontact .contain_contact2 .contain_item .experience_text .btn .btn_ic {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.groupcontact .menu_footer {
+  margin-top: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--text);
+  color: var(--text);
+}
+@media all and (max-width: 943px) {
+  .groupcontact .menu_footer {
+    font-size: 0.8em;
+  }
+}
+@media all and (max-width: 800px) {
+  .groupcontact .menu_footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+  }
+}
+@media all and (max-width: 360px) {
+  .groupcontact .menu_footer {
+    font-size: 0.8em;
+  }
+}
+.groupcontact .menu_footer__contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 33%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media all and (max-width: 800px) {
+  .groupcontact .menu_footer__contain {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.groupcontact .menu_footer__contain__item {
+  text-transform: uppercase;
+}
+@media all and (max-width: 943px) {
+  .groupcontact .menu_footer__contain__item {
+    font-size: 0.8em;
+  }
+}
+@media all and (max-width: 800px) {
+  .groupcontact .menu_footer__contain__item {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+.groupcontact .menu_footer .menu_footer__contain--sign {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media all and (max-width: 800px) {
+  .groupcontact .menu_footer .menu_footer__contain--sign {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+footer {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+footer .banderol_footer {
+  display: block;
+  overflow: hidden;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+footer .banderol_footer .text {
+  font-family: "italia";
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 112px;
+  letter-spacing: 0em;
+  text-align: left;
+  word-break: keep-all;
+  color: var(--text);
+  -webkit-animation: scrollLeft 100s linear infinite;
+          animation: scrollLeft 100s linear infinite;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media all and (max-width: 1000px) {
+  footer .banderol_footer .text {
+    font-size: 3em;
+  }
+}
+footer .banderol_footer .text span:nth-child(2n) {
+  color: transparent;
+  -webkit-text-stroke-color: var(--text);
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: var(--text);
+  -moz-text-stroke-width: 2px;
+  -o-text-stroke-color: var(--text);
+  -o-text-stroke-width: 2px;
+  -ms-text-stroke-color: var(--text);
+  -ms-text-stroke-width: 2px;
+}
+@media all and (max-width: 800px) {
+  footer .banderol_footer .text {
+    margin-top: 10px;
   }
 }
