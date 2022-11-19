@@ -57,6 +57,7 @@ Black 900
   width: 100%;
   height: auto;
   overflow-x: hidden;
+  scroll-behavior: smooth;
   background: var(--fond);
   color: var(--text);
   font-family: "Poppins", sans-serif;
@@ -1927,6 +1928,11 @@ a :hover {
 .groupcontact .contain_contact_center .contain_item div {
   display: inline-block;
   text-align: center;
+}
+.groupcontact .contain_contact_center .contain_item a {
+  display: block;
+  text-transform: lowercase;
+  margin-bottom: 10px;
 }
 .groupcontact .contain_contact2 {
   margin-top: 60px;

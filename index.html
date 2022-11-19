@@ -40,7 +40,7 @@
     ></script>
 
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css?v=1" />
+    <link rel="stylesheet" href="css/style.css?v=2" />
   </head>
   <body class="body">
     <div class="loader">
@@ -49,7 +49,7 @@
 
     <main class="main">
       <!-- enter content -->
-      <header class="header">
+      <header  class="header">
         <div class="struct">
           <div class="logo">
             <img class="no_dark" src="images/white_logo.png" alt="" />
@@ -57,14 +57,14 @@
           </div>
           <nav>
             <ul>
-              <li>Home</li>
-              <li>Work</li>
-              <li>Experience</li>
-              <li>Contact</li>
+              <li><a href="#HOME">Home</a></li>
+              <li><a href="#WORK">Work</a></li>
+              <li><a href="#EXPERIENCE">Experience</a></li>
+              <li><a href="#CONTACT">Contact</a></li>
             </ul>
           </nav>
           <div class="btn">
-            <div class="txt">Email Me</div>
+            <a href="mailto:florian.tchomga@gmail.com" class="txt">Email Me</a>
             <div class="btn_ic flex_center">
               <img class="no_light" src="images/arrow_dark.svg" alt="" />
               <img class="no_dark" src="images/arrow_light.svg" alt="" />
@@ -73,7 +73,7 @@
         </div>
       </header>
 
-      <div class="carousel">
+      <div class="carousel" id="HOME">
         <div class="moving_shape moving_shape1"></div>
 
         <div class="struct">
@@ -88,7 +88,7 @@
                 eCommerce stores for people.
               </div>
               <div class="btn">
-                <div class="txt">Email Me</div>
+                <a href="mailto:florian.tchomga@gmail.com" class="txt">Email Me</a>
                 <div class="btn_ic flex_center">
                   <img class="no_light" src="images/arrow_dark.svg" alt="" />
                   <img class="no_dark" src="images/arrow_light.svg" alt="" />
@@ -135,6 +135,7 @@
             </div>
           </div>
         </div>
+        
       </div>
 
       <div class="banderol">
@@ -169,8 +170,8 @@
           <span>REACTJS</span>
         </div>
       </div>
-
-      <section class="group">
+      <SPAN id="WORK"></SPAN>
+      <section  class="group">
         <div class="group__struct">
           <div class="group__struct__title">
             <div class="left">
@@ -183,7 +184,7 @@
               <div class="experience_text">
                 Mixing up work and play, every day
                 <div class="btn">
-                  <div class="txt">Email Me</div>
+                  <a href="mailto:florian.tchomga@gmail.com" class="txt">Email Me</a>
                   <div class="btn_ic flex_center">
                     <img class="no_light" src="images/arrow_dark.svg" alt="" />
                     <img class="no_dark" src="images/arrow_light.svg" alt="" />
@@ -464,14 +465,14 @@
         </div>
       </section>
 
-      <section class="group group_experience">
+      <section id="EXPERIENCE" class="group group_experience">
         <div class="group__struct">
           <div class="group__struct__title">
             <div class="left">
               <div class="experience_text">
                 Experience and Curriculum
                 <div class="btn">
-                  <div class="txt">Email Me</div>
+                  <a href="mailto:florian.tchomga@gmail.com"  class="txt">Email Me</a>
                   <div class="btn_ic flex_center">
                     <img class="no_light" src="images/arrow_dark.svg" alt="" />
                     <img class="no_dark" src="images/arrow_light.svg" alt="" />
@@ -486,7 +487,7 @@
                   (the good kind).
                 </div>
 
-                <div class="btn_cv_download">Download cv</div>
+                <a href="pdf/resume-20-nov-2022-en-fr.pdf" class="btn_cv_download">Download cv</a>
               </div>
             </div>
             <div class="right">
@@ -585,7 +586,7 @@
               <div class="experience_text">
                 Formations and Certifications
                 <div class="btn">
-                  <div class="txt">Email Me</div>
+                  <a href="mailto:florian.tchomga@gmail.com" class="txt">Email Me</a>
                   <div class="btn_ic flex_center">
                     <img class="no_light" src="images/arrow_dark.svg" alt="" />
                     <img class="no_dark" src="images/arrow_light.svg" alt="" />
@@ -600,7 +601,7 @@
                   (the good kind).
                 </div>
 
-                <div class="btn_cv_download">Download cv</div>
+                <a  href="pdf/resume-20-nov-2022-en-fr.pdf" class="btn_cv_download">Download cv</a>
               </div>
             </div>
             <div class="right">
@@ -709,23 +710,23 @@
           </div>
         </div>
       </section>
-
-      <section class="group groupcontact">
+<SPAN id="CONTACT"></SPAN>
+      <section  class="group groupcontact">
         <div class="group__struct">
-          <!-- <div class="groupcontact_title">
+          <div class="groupcontact_title">
             <div class="small">Get In Touch</div>
             <div class="titre">
               Here to get things done, here to make it fun
             </div>
-          </div> -->
+          </div>
 
-          <!-- <div class="contain_contact contain_contact_center">
+          <div class="contain_contact contain_contact_center">
             <div class="contain_item">
-              <div>+237 697132706</div>
-              <div>FLORIAN.TCHOMGA@GMAIL.COM</div>
-              <div>http://Wa.me/237682050213</div>
+              <a href="tel:+237697132706">+237697132706</a>
+              <a href="mailto:florian.tchomga@gmail.com">FLORIAN.TCHOMGA@GMAIL.COM</a>
+              <a href="https://Wa.me/237682050213" target="_blank">https://wa.me/237682050213</a>
             </div>
-          </div> -->
+          </div>
 
           <div class="contain_contact contain_contact2">
             <div class="contain_item">
@@ -737,7 +738,7 @@
               <div class="experience_text">
                 Mixing up work and play, every day
                 <div class="btn">
-                  <div class="txt">Email Me</div>
+                  <a href="mailto:florian.tchomga@gmail.com" class="txt">Email Me</a>
                   <div class="btn_ic flex_center">
                     <img class="no_light" src="images/arrow_dark.svg" alt="" />
                     <img class="no_dark" src="images/arrow_light.svg" alt="" />
@@ -746,26 +747,30 @@
               </div>
             </div>
           </div>
-          
+
+
+         
+
 
           <div class="menu_footer">
             <div class="menu_footer__contain">
-              <div class="menu_footer__contain__item">Home</div>
-              <div class="menu_footer__contain__item">Work</div>
-              <div class="menu_footer__contain__item">Experience</div>
-              <div class="menu_footer__contain__item">Contact</div>
+              <a href="#HOME" class="menu_footer__contain__item">Home</a>
+              <a href="#WORK" class="menu_footer__contain__item">Work</a>
+              <a  href="#EXPERIENCE" class="menu_footer__contain__item">Experience</a>
+              <a  href="#CONTACT" class="menu_footer__contain__item">Contact</a>
             </div>
             <div class="menu_footer__contain menu_footer__contain--sign">
-              <div class="menu_footer__contain__item">FLORIAN TCHOMGA © 2022</div>
+              <div class="menu_footer__contain__item">
+                FLORIAN TCHOMGA © <script>document.write(new Date().toLocaleString('default', { month: 'long' }).slice(0,3))</script> <script>document.write(new Date().getFullYear())</script>
+              </div>
             </div>
             <div class="menu_footer__contain">
-              <div class="menu_footer__contain__item">MAILBOX</div>
-              <div class="menu_footer__contain__item">LINKEDIN</div>
-              <div class="menu_footer__contain__item">TWITTER</div>
-              <div class="menu_footer__contain__item">GITHUB</div>
+              <a href="mailto:florian.tchomga@gmail.com" class="menu_footer__contain__item">MAILBOX</a>
+              <a href="https://www.linkedin.com/in/florian-tchomga-266398162/" target="_blank" class="menu_footer__contain__item">LINKEDIN</a>
+              <a href="https://twitter.com/pieplieflorian" target="_blank" class="menu_footer__contain__item">TWITTER</a>
+              <a href="https://github.com/flocod" target="_blank" class="menu_footer__contain__item">GITHUB</a>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -813,10 +818,8 @@
             <span>Let's work together !</span>
             <span>Let's work together !</span>
           </div>
-       
         </div>
       </footer>
-
     </main>
 
     <div class="noise"></div>
