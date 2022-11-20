@@ -1425,14 +1425,14 @@ a :hover {
   }
 }
 .group__struct__container .project .project_struct .desc .des_struct .name_project {
-  font-family: "Segoe UI";
+  font-family: "Poppins";
   font-weight: bold;
   font-size: 22px;
   text-align: left;
   color: var(--text);
 }
 .group__struct__container .project .project_struct .desc .des_struct .date_project {
-  font-family: "Segoe UI";
+  font-family: "Poppins";
   font-weight: normal;
   font-size: 20px;
   text-align: left;
@@ -1448,7 +1448,7 @@ a :hover {
   }
 }
 .group__struct__container .project .project_struct .desc .des_struct .desc_project {
-  font-family: "Segoe UI";
+  font-family: "Poppins";
   font-weight: 300;
   font-size: 20px;
   text-align: left;
