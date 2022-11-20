@@ -24,7 +24,7 @@ function loader_percentage() {
 
   let img = document.images,
     c = 0,
-    tot = img.length;
+    tot = img.length-15;
 
   for (let i = 0; i < tot; i++) {
     let tImg = new Image();
@@ -32,6 +32,7 @@ function loader_percentage() {
     tImg.onerror = imgLoaded;
     tImg.src = img[i].src;
     console.log(` image ${i} est correctement chargée`);
+    console.log("tImg",tImg.src);
   }
 }
 
