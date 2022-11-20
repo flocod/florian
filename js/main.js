@@ -32,11 +32,11 @@ function loader_percentage() {
     tImg.onerror = imgLoaded;
     tImg.src = img[i].src;
     console.log(` image ${i} est correctement chargée`);
-    console.log("tImg",tImg.src);
+    console.log("tImg",i);
   }
 }
 
-// loader_percentage();
+loader_percentage();
 
 // how to declare letiable ?
 

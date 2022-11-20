@@ -75,7 +75,7 @@ Black 900
   height: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-//  overflow-y: hidden;
+ overflow-y: hidden;
   background: var(--fond);
   color: var(--text);
   font-family: "Poppins", sans-serif;
@@ -167,7 +167,7 @@ a {
   width: 100%;
   overflow-x:hidden ;
   overflow-y: auto;
-  // opacity: 0;
+  opacity: 0;
 }
 
 $struct: 90%;
@@ -835,11 +835,11 @@ $struct: 90%;
   -webkit-animation: noise 1s steps(2) infinite;
   animation: noise 1s steps(2) infinite;
 }
-@media all and (max-width: 700px) {
-  .noise {
-    display: none !important;
-  }
-}
+// @media all and (max-width: 700px) {
+//   .noise {
+//     display: none !important;
+//   }
+// }
 @-webkit-keyframes noise {
   0% {
     -webkit-transform: translate3d(0, 9rem, 0);
