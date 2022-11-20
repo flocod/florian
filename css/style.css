@@ -163,6 +163,7 @@ a :hover {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  opacity: 0;
 }
 
 .header {
@@ -1648,6 +1649,7 @@ a :hover {
   margin-top: 80px;
 }
 .group_experience .container_experience .experience_item {
+  text-transform: uppercase !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2114,6 +2116,32 @@ footer .banderol_footer .text span:nth-child(2n) {
 }
 @media all and (max-width: 800px) {
   footer .banderol_footer .text {
+    margin-top: 10px;
+  }
+}
+footer .banderol_footer_stack .text {
+  margin-top: 0px;
+  -webkit-animation: scrollLeft 100s linear infinite;
+          animation: scrollLeft 100s linear infinite;
+}
+@media all and (max-width: 1000px) {
+  footer .banderol_footer_stack .text {
+    font-size: 3em;
+  }
+}
+footer .banderol_footer_stack .text span:nth-child(2n) {
+  color: transparent;
+  -webkit-text-stroke-color: var(--text);
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-color: var(--text);
+  -moz-text-stroke-width: 2px;
+  -o-text-stroke-color: var(--text);
+  -o-text-stroke-width: 2px;
+  -ms-text-stroke-color: var(--text);
+  -ms-text-stroke-width: 2px;
+}
+@media all and (max-width: 800px) {
+  footer .banderol_footer_stack .text {
     margin-top: 10px;
   }
 }

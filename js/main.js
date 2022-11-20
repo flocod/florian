@@ -1,5 +1,3 @@
-
-
 function loader_percentage() {
   let loader_percen = { percen: 0 },
     percenDisplay = document.getElementById("percenDisplay");
@@ -10,6 +8,7 @@ function loader_percentage() {
     if (loader_percen.percen.toFixed(2) >= 100) {
       $(".loader").fadeOut();
       $("body").css('overflow-y','auto');
+      $("main").css('opacity','1');
     }
   }
 

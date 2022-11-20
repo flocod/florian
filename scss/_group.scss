@@ -441,6 +441,7 @@ $struct: 90%;
     width: 100%;
     margin-top: 80px;
     .experience_item {
+      text-transform: uppercase !important;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -835,4 +836,43 @@ footer {
       }
     }
   }
+
+  .banderol_footer_stack{
+    .text {
+     
+      margin-top: 0px;
+      animation: scrollLeft 100s linear infinite;
+
+
+      @media all and (max-width: 1000px) {
+       font-size: 3em;
+      }
+
+
+      span {
+        
+        &:nth-child(2n) {
+          
+          color: transparent;
+          -webkit-text-stroke-color: var(--text);
+          -webkit-text-stroke-width: 2px;
+          -moz-text-stroke-color: var(--text);
+          -moz-text-stroke-width: 2px;
+          -o-text-stroke-color: var(--text);
+          -o-text-stroke-width: 2px;
+          -ms-text-stroke-color: var(--text);
+          -ms-text-stroke-width: 2px;
+        }
+      }
+
+      @media all and (max-width: 800px) {
+        margin-top: 10px;
+      }
+    }
+
+  
+  }
+
 }
+
+
