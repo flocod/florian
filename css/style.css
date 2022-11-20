@@ -659,6 +659,26 @@ a :hover {
             transform: translateX(-50%);
   }
 }
+@-webkit-keyframes scrollRight {
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+  }
+}
+@keyframes scrollRight {
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+  }
+}
 @-webkit-keyframes swipeUp {
   from {
     -webkit-transform: translateY(0%);
@@ -2080,7 +2100,7 @@ footer .banderol_footer {
 }
 footer .banderol_footer .text {
   font-family: "italia";
-  margin-top: 20px;
+  margin-top: 0px;
   font-weight: 600;
   font-size: 112px;
   letter-spacing: 0em;
@@ -2116,13 +2136,13 @@ footer .banderol_footer .text span:nth-child(2n) {
 }
 @media all and (max-width: 800px) {
   footer .banderol_footer .text {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 }
 footer .banderol_footer_stack .text {
-  margin-top: 0px;
-  -webkit-animation: scrollLeft 100s linear infinite;
-          animation: scrollLeft 100s linear infinite;
+  margin-top: 20px;
+  -webkit-animation: scrollRight 25s linear infinite;
+          animation: scrollRight 25s linear infinite;
 }
 @media all and (max-width: 1000px) {
   footer .banderol_footer_stack .text {

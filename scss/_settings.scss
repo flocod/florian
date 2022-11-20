@@ -585,6 +585,23 @@ $struct: 90%;
   }
 
 }
+@keyframes scrollRight {
+  // 0%,
+  // 100% {
+  //   transform: translateX(0px);
+  // }
+  // 50% {
+  //   transform: translate(-100%);
+  // }
+
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(1px);
+  }
+
+}
 
 
 

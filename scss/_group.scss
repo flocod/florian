@@ -795,14 +795,14 @@ footer {
    
     .text {
       font-family: "italia";
-      margin-top: 20px;
+      margin-top: 0px;
       font-weight: 600;
       font-size: 112px;
       letter-spacing: 0em;
       text-align: left;
       word-break: keep-all;
       color: var(--text);
-      
+      // text-transform: uppercase;
       animation: scrollLeft 100s linear infinite;
       white-space:nowrap;
      
@@ -832,7 +832,7 @@ footer {
       }
 
       @media all and (max-width: 800px) {
-        margin-top: 10px;
+        margin-top: 0px;
       }
     }
   }
@@ -840,8 +840,8 @@ footer {
   .banderol_footer_stack{
     .text {
      
-      margin-top: 0px;
-      animation: scrollLeft 100s linear infinite;
+      margin-top: 20px;
+      animation: scrollRight 25s linear infinite;
 
 
       @media all and (max-width: 1000px) {
