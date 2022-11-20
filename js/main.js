@@ -36,7 +36,7 @@ function loader_percentage() {
   }
 }
 
-loader_percentage();
+// loader_percentage();
 
 // how to declare letiable ?
 

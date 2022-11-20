@@ -58,7 +58,6 @@ Black 900
   height: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  overflow-y: hidden;
   background: var(--fond);
   color: var(--text);
   font-family: "Poppins", sans-serif;
@@ -164,7 +163,6 @@ a :hover {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  opacity: 0;
 }
 
 .header {
