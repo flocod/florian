@@ -24,7 +24,7 @@ function loader_percentage() {
 
   let img = document.images,
     c = 0,
-    tot = img.length-24;
+    tot = img.length;
 
   for (let i = 0; i < tot; i++) {
     let tImg = new Image();
