@@ -7,7 +7,7 @@
   "orientation": "portrait",
   "scope": "/",
   "short_name": "Florian Tchomga",
-  "start_url": "/index.html",
+  "start_url": "https://flocod.github.io/florian/index.html",
   "theme_color": "#fcfaf9",
   "categories": [
     "business"
