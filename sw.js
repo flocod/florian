@@ -1,11 +1,11 @@
-// This is the "Offline page" service worker
+// This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
+
+const CACHE = "https://flocod.github.io/florian/index.html";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-const CACHE = "index.html";
-
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "index.html";
+const offlineFallbackPage = "https://flocod.github.io/florian/index.html";
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
@@ -23,6 +23,13 @@ self.addEventListener('install', async (event) => {
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
 }
+
+workbox.routing.registerRoute(
+  new RegExp('/*'),
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: CACHE
+  })
+);
 
 self.addEventListener('fetch', (event) => {
   if (event.request.mode === 'navigate') {
@@ -45,3 +52,24 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
+
+// // On install - caching the application shell
+// self.addEventListener('install', function(event) {
+//     event.waitUntil(
+//       caches.open('sw-cache').then(function(cache) {
+//         // cache any static files that make up the application shell
+//         return cache.add('index.html');
+//       })
+//     );
+//   });
+  
+//   // On network request
+//   self.addEventListener('fetch', function(event) {
+//     event.respondWith(
+//       // Try the cache
+//       caches.match(event.request).then(function(response) {
+//         //If response found return it, else fetch again
+//         return response || fetch(event.request);
+//       })
+//     );
+//   });
