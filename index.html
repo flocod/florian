@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Florian Tchomga | Full stack Web Developer</title>
+
     <meta
       name="keywords"
       content="Porfolio, Florian, Tchomga, Florian Tchomga, Cameroun, Cameroon, Designer, developpeur, back-end , FRONT-END, WEBSITES"
@@ -38,6 +39,14 @@
       property="og:image"
       content="https://avatars.githubusercontent.com/u/78868569?v=4"
     />
+
+    <link rel="manifest" href="manifest.json">
+    <script>
+      //if browser support service worker
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+      };
+    </script>
 
     <script
       src="https://kit.fontawesome.com/e75ff8fc88.js"
