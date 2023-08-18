@@ -73,7 +73,7 @@ $struct: 90%;
       .experience {
         display: block;
         .t1 {
-          font-family: "italia";
+          font-family: "Bricolage Grotesque";
           font-weight: 600;
           font-size: 112px;
           letter-spacing: 0em;
@@ -115,7 +115,7 @@ $struct: 90%;
       }
 
       .experience_text {
-        font-family: "italia";
+        font-family: "Bricolage Grotesque";
         font-weight: 600;
         font-size: 80px;
         letter-spacing: 0em;
@@ -189,9 +189,9 @@ $struct: 90%;
           align-items: center;
           align-content: space-between;
 
-          transform: translateY(110%);
+         
           transition: 0.3s;
-          opacity: 0;
+          opacity: 1;
 
           @media all and (max-width: 952px) {
             padding-top: 20px;
@@ -209,7 +209,8 @@ $struct: 90%;
             display: flex;
             justify-content: center;
             align-items: flex-start;
-
+            transform: translateY(0%);
+            transition: 0.3s;
             border-radius: 12px;
             // background: transparent;
             /* Note: currently only Safari supports backdrop-filter */
@@ -228,7 +229,7 @@ $struct: 90%;
               }
 
               .name_project {
-                font-family: "Poppins";
+                font-family: "Bricolage Grotesque";
                 font-weight: bold;
                 font-size: 22px;
                 text-align: left;
@@ -236,7 +237,7 @@ $struct: 90%;
               }
 
               .date_project {
-                font-family: "Poppins";
+                font-family: "Bricolage Grotesque";
                 font-weight: normal;
                 font-size: 20px;
                 text-align: left;
@@ -247,12 +248,12 @@ $struct: 90%;
 
                 @media all and (max-width: 452px) {
                   font-size: 1em;
-                  font-family: "Poppins";
+                  font-family: "Bricolage Grotesque";
                 }
               }
 
               .desc_project {
-                font-family: "Poppins";
+                font-family: "Bricolage Grotesque";
                 font-weight: 300;
                 font-size: 20px;
                 text-align: left;
@@ -265,11 +266,11 @@ $struct: 90%;
 
                 @media all and (max-width: 512px) {
                   font-size: 1em;
-                  font-family: "Poppins";
+                  font-family: "Bricolage Grotesque";
                 }
                 @media all and (max-width: 452px) {
                   font-size: 0.9em;
-                  font-family: "Poppins";
+                  font-family: "Bricolage Grotesque";
                 }
 
                 .stack_project {
@@ -286,7 +287,7 @@ $struct: 90%;
                     margin-bottom: 7px;
                     @media all and (max-width: 452px) {
                       font-size: 0.9em;
-                      font-family: "Poppins";
+                      font-family: "Bricolage Grotesque";
                     }
                   }
                 }
@@ -322,7 +323,7 @@ $struct: 90%;
 
             @media all and (max-width: 512px) {
               font-size: 1em;
-              font-family: "Poppins";
+              font-family: "Bricolage Grotesque";
             }
 
             .ico {
@@ -340,9 +341,14 @@ $struct: 90%;
           transition: 2s;
 
           .project_struct {
-            opacity: 1;
-            transition: 0.3s;
-            transform: translateX(0%);
+
+            .desc{
+              opacity: 0;
+              transition: 0.3s;
+              transform: translateY(-110%);
+            }
+
+           
           }
         }
       }
@@ -362,7 +368,7 @@ $struct: 90%;
     display: block;
     margin-top: 25px;
     font-size: 0.2em;
-    font-family: "Poppins";
+    font-family: "Bricolage Grotesque";
     font-weight: 400;
     width: 80%;
 
@@ -410,7 +416,7 @@ $struct: 90%;
     border: 1px solid var(--text);
     color: var(--text);
     font-size: 0.35em;
-    font-family: "Poppins";
+    font-family: "Bricolage Grotesque";
     margin-top: 30px;
     cursor: pointer;
     transition: 0.5s;
@@ -462,7 +468,7 @@ $struct: 90%;
 
       .enterprise {
         text-align: left;
-        font-family: Poppins;
+        font-family: Bricolage Grotesque;
         @media all and (max-width: 366px) {
           text-align: center;
           width: 100%;
@@ -495,7 +501,7 @@ $struct: 90%;
       }
 
       .experience_detail_big {
-        font-family: "italia";
+        font-family: "Bricolage Grotesque";
         font-weight: 600;
         font-size: 45px;
         letter-spacing: 0em;
@@ -568,7 +574,7 @@ $struct: 90%;
       font-size: 25px;
       letter-spacing: 0em;
       text-align: left;
-      font-family: Poppins;
+      font-family: Bricolage Grotesque;
       font-size: 2em;
       margin-bottom: 10px;
       @media all and (max-width: 1243px) {
@@ -583,7 +589,7 @@ $struct: 90%;
     .titre {
       width: 60%;
       text-align: center;
-      font-family: "italia";
+      font-family: "Bricolage Grotesque";
       font-size: 4em;
 
       @media all and (max-width: 1243px) {
@@ -613,7 +619,7 @@ $struct: 90%;
     .contain_item {
       width: 45%;
       text-align: left;
-      font-family: "italia";
+      font-family: "Bricolage Grotesque";
 
       font-weight: 300;
       font-size: 2em;
@@ -697,7 +703,7 @@ $struct: 90%;
       }
 
       .experience_text {
-        font-family: "italia";
+        font-family: "Bricolage Grotesque";
         font-weight: 600;
         font-size: 2.5em;
         letter-spacing: 0em;
@@ -794,7 +800,7 @@ footer {
     width: max-content;
    
     .text {
-      font-family: "italia";
+      font-family: "Bricolage Grotesque";
       margin-top: 0px;
       font-weight: 600;
       font-size: 112px;
@@ -821,13 +827,15 @@ footer {
    
           color: transparent;
           -webkit-text-stroke-color: var(--text);
-          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-width: 1px;
           -moz-text-stroke-color: var(--text);
-          -moz-text-stroke-width: 2px;
+          -moz-text-stroke-width: 1px;
           -o-text-stroke-color: var(--text);
-          -o-text-stroke-width: 2px;
+          -o-text-stroke-width: 1px;
           -ms-text-stroke-color: var(--text);
-          -ms-text-stroke-width: 2px;
+          -ms-text-stroke-width: 1px;
+
+          opacity: 0.5;
         }
       }
 
@@ -855,13 +863,15 @@ footer {
           
           color: transparent;
           -webkit-text-stroke-color: var(--text);
-          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-width: 1px;
           -moz-text-stroke-color: var(--text);
-          -moz-text-stroke-width: 2px;
+          -moz-text-stroke-width: 1px;
           -o-text-stroke-color: var(--text);
-          -o-text-stroke-width: 2px;
+          -o-text-stroke-width: 1px;
           -ms-text-stroke-color: var(--text);
-          -ms-text-stroke-width: 2px;
+          -ms-text-stroke-width: 1px;
+
+          opacity: 0.5;
         }
       }
 

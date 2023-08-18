@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap");
 /**
 Thin 100
 Extra-light 200
@@ -12,18 +14,11 @@ Bold 700
 Extra-bold 800
 Black 900
 **/
-@font-face {
-  font-family: "italia";
-  src: url("../fonts/Italian.woff2") format("woff2"), url("../fonts/Italian.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 .light {
-  --text: #16161d;
-  --text_rgb: 22, 22, 29;
-  --fond: #fcfaf9;
-  --fond_rgb: 252, 250, 249;
+  --text: #1a1a1a;
+  --text_rgb: 26, 26, 26;
+  --fond: #f6f6f6;
+  --fond_rgb: 247, 230, 196;
 }
 .light * {
   mix-blend-mode: normal !important;
@@ -61,7 +56,7 @@ Black 900
   overflow-y: hidden;
   background: var(--fond);
   color: var(--text);
-  font-family: "Poppins", sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,7 +65,10 @@ Black 900
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  cursor: crosshair;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media all and (min-width: 2000px) {
   .body {
@@ -339,14 +337,9 @@ a :hover {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   position: relative;
-}
-@media all and (max-width: 750px) {
-  .carousel {
-    height: calc(100vh - 50px);
-  }
 }
 .carousel .struct {
   display: -webkit-box;
@@ -405,7 +398,7 @@ a :hover {
   }
 }
 .carousel .struct .carousel_intro .text_big {
-  font-family: "Poppins";
+  font-family: "Bricolage Grotesque";
   font-weight: 200;
   text-transform: capitalize;
   font-size: 4em;
@@ -1003,6 +996,11 @@ a :hover {
   animation: noise 1s steps(2) infinite;
 }
 
+@media all and (max-width: 700px) {
+  .noise {
+    display: none !important;
+  }
+}
 @-webkit-keyframes noise {
   0% {
     -webkit-transform: translate3d(0, 9rem, 0);
@@ -1224,7 +1222,7 @@ a :hover {
   display: block;
 }
 .group__struct__title .experience .t1 {
-  font-family: "italia";
+  font-family: "Bricolage Grotesque";
   font-weight: 600;
   font-size: 112px;
   letter-spacing: 0em;
@@ -1270,7 +1268,7 @@ a :hover {
   }
 }
 .group__struct__title .experience_text {
-  font-family: "italia";
+  font-family: "Bricolage Grotesque";
   font-weight: 600;
   font-size: 80px;
   letter-spacing: 0em;
@@ -1380,11 +1378,9 @@ a :hover {
           align-items: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  -webkit-transform: translateY(110%);
-          transform: translateY(110%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  opacity: 0;
+  opacity: 1;
 }
 @media all and (max-width: 952px) {
   .group__struct__container .project .project_struct {
@@ -1410,6 +1406,10 @@ a :hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-radius: 12px;
   /* Note: currently only Safari supports backdrop-filter */
   background: rgba(var(--fond_rgb), 1);
@@ -1425,14 +1425,14 @@ a :hover {
   }
 }
 .group__struct__container .project .project_struct .desc .des_struct .name_project {
-  font-family: "Poppins";
+  font-family: "Bricolage Grotesque";
   font-weight: bold;
   font-size: 22px;
   text-align: left;
   color: var(--text);
 }
 .group__struct__container .project .project_struct .desc .des_struct .date_project {
-  font-family: "Poppins";
+  font-family: "Bricolage Grotesque";
   font-weight: normal;
   font-size: 20px;
   text-align: left;
@@ -1444,11 +1444,11 @@ a :hover {
 @media all and (max-width: 452px) {
   .group__struct__container .project .project_struct .desc .des_struct .date_project {
     font-size: 1em;
-    font-family: "Poppins";
+    font-family: "Bricolage Grotesque";
   }
 }
 .group__struct__container .project .project_struct .desc .des_struct .desc_project {
-  font-family: "Poppins";
+  font-family: "Bricolage Grotesque";
   font-weight: 300;
   font-size: 20px;
   text-align: left;
@@ -1463,13 +1463,13 @@ a :hover {
 @media all and (max-width: 512px) {
   .group__struct__container .project .project_struct .desc .des_struct .desc_project {
     font-size: 1em;
-    font-family: "Poppins";
+    font-family: "Bricolage Grotesque";
   }
 }
 @media all and (max-width: 452px) {
   .group__struct__container .project .project_struct .desc .des_struct .desc_project {
     font-size: 0.9em;
-    font-family: "Poppins";
+    font-family: "Bricolage Grotesque";
   }
 }
 .group__struct__container .project .project_struct .desc .des_struct .desc_project .stack_project {
@@ -1489,7 +1489,7 @@ a :hover {
 @media all and (max-width: 452px) {
   .group__struct__container .project .project_struct .desc .des_struct .desc_project .stack_project .stack {
     font-size: 0.9em;
-    font-family: "Poppins";
+    font-family: "Bricolage Grotesque";
   }
 }
 .group__struct__container .project .project_struct .link_project {
@@ -1527,7 +1527,7 @@ a :hover {
 @media all and (max-width: 512px) {
   .group__struct__container .project .project_struct .link_project {
     font-size: 1em;
-    font-family: "Poppins";
+    font-family: "Bricolage Grotesque";
   }
 }
 .group__struct__container .project .project_struct .link_project .ico {
@@ -1539,12 +1539,12 @@ a :hover {
   -webkit-transition: 2s;
   transition: 2s;
 }
-.group__struct__container .project:hover .project_struct {
-  opacity: 1;
+.group__struct__container .project:hover .project_struct .desc {
+  opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
 }
 
 .group_experience .left {
@@ -1559,7 +1559,7 @@ a :hover {
   display: block;
   margin-top: 25px;
   font-size: 0.2em;
-  font-family: "Poppins";
+  font-family: "Bricolage Grotesque";
   font-weight: 400;
   width: 80%;
 }
@@ -1627,7 +1627,7 @@ a :hover {
   border: 1px solid var(--text);
   color: var(--text);
   font-size: 0.35em;
-  font-family: "Poppins";
+  font-family: "Bricolage Grotesque";
   margin-top: 30px;
   cursor: pointer;
   -webkit-transition: 0.5s;
@@ -1697,7 +1697,7 @@ a :hover {
 }
 .group_experience .container_experience .experience_item .enterprise {
   text-align: left;
-  font-family: Poppins;
+  font-family: Bricolage Grotesque;
 }
 @media all and (max-width: 366px) {
   .group_experience .container_experience .experience_item .enterprise {
@@ -1733,7 +1733,7 @@ a :hover {
   }
 }
 .group_experience .container_experience .experience_item .experience_detail_big {
-  font-family: "italia";
+  font-family: "Bricolage Grotesque";
   font-weight: 600;
   font-size: 45px;
   letter-spacing: 0em;
@@ -1817,7 +1817,7 @@ a :hover {
   font-size: 25px;
   letter-spacing: 0em;
   text-align: left;
-  font-family: Poppins;
+  font-family: Bricolage Grotesque;
   font-size: 2em;
   margin-bottom: 10px;
 }
@@ -1834,7 +1834,7 @@ a :hover {
 .groupcontact .groupcontact_title .titre {
   width: 60%;
   text-align: center;
-  font-family: "italia";
+  font-family: "Bricolage Grotesque";
   font-size: 4em;
 }
 @media all and (max-width: 1243px) {
@@ -1874,7 +1874,7 @@ a :hover {
 .groupcontact .contain_contact .contain_item {
   width: 45%;
   text-align: left;
-  font-family: "italia";
+  font-family: "Bricolage Grotesque";
   font-weight: 300;
   font-size: 2em;
   letter-spacing: 0em;
@@ -1969,7 +1969,7 @@ a :hover {
   }
 }
 .groupcontact .contain_contact2 .contain_item .experience_text {
-  font-family: "italia";
+  font-family: "Bricolage Grotesque";
   font-weight: 600;
   font-size: 2.5em;
   letter-spacing: 0em;
@@ -2095,7 +2095,7 @@ footer .banderol_footer {
   width: max-content;
 }
 footer .banderol_footer .text {
-  font-family: "italia";
+  font-family: "Bricolage Grotesque";
   margin-top: 0px;
   font-weight: 600;
   font-size: 112px;
@@ -2122,13 +2122,14 @@ footer .banderol_footer .text {
 footer .banderol_footer .text span:nth-child(2n) {
   color: transparent;
   -webkit-text-stroke-color: var(--text);
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -moz-text-stroke-color: var(--text);
-  -moz-text-stroke-width: 2px;
+  -moz-text-stroke-width: 1px;
   -o-text-stroke-color: var(--text);
-  -o-text-stroke-width: 2px;
+  -o-text-stroke-width: 1px;
   -ms-text-stroke-color: var(--text);
-  -ms-text-stroke-width: 2px;
+  -ms-text-stroke-width: 1px;
+  opacity: 0.5;
 }
 @media all and (max-width: 800px) {
   footer .banderol_footer .text {
@@ -2148,13 +2149,14 @@ footer .banderol_footer_stack .text {
 footer .banderol_footer_stack .text span:nth-child(2n) {
   color: transparent;
   -webkit-text-stroke-color: var(--text);
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -moz-text-stroke-color: var(--text);
-  -moz-text-stroke-width: 2px;
+  -moz-text-stroke-width: 1px;
   -o-text-stroke-color: var(--text);
-  -o-text-stroke-width: 2px;
+  -o-text-stroke-width: 1px;
   -ms-text-stroke-color: var(--text);
-  -ms-text-stroke-width: 2px;
+  -ms-text-stroke-width: 1px;
+  opacity: 0.5;
 }
 @media all and (max-width: 800px) {
   footer .banderol_footer_stack .text {
