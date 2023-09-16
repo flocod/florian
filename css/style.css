@@ -56,7 +56,7 @@ Black 900
   overflow-y: hidden;
   background: var(--fond);
   color: var(--text);
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: "Bricolage Grotesque" !important;
   font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,7 +94,7 @@ Black 900
   left: 0px;
   top: 0px;
   z-index: 1900000;
-  font-family: "Montserrat";
+  font-family: "Bricolage Grotesque";
   font-weight: 900;
   letter-spacing: 0px;
   font-size: 6vw;
