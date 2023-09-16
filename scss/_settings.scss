@@ -9,7 +9,7 @@ $color: #16161d;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
 /**
 Thin 100
 Extra-light 200
@@ -107,7 +107,8 @@ Black 900
  overflow-y: hidden;
   background: var(--fond);
   color: var(--text);
-  font-family: 'Bricolage Grotesque' !important;
+  // font-family: 'Bricolage Grotesque' !important;
+  font-family: 'Unbounded' !important;
   // font-family: "Poppins", sans-serif;
   font-weight: 400;
   display: flex;
@@ -147,8 +148,12 @@ Black 900
 * {
   outline: none;
   scroll-behavior: smooth;
+ 
 }
 
+*:not(i){
+  font-family: 'Bricolage Grotesque' !important;
+}
 
 *::selection{
   background: var(--text);
