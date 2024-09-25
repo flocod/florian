@@ -1,0 +1,140 @@
+[
+    {
+        "name_project": "Easytravelex",
+        "date_project": "August 2023",
+        "desc_project": "Easytravelex is a travel agency website in the United Arab Emirates. The website was created in REACTJS. The current project is only the front-end side.",
+        "stack": [
+            "REACTJS",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY"
+        ],
+        "link": "https://easytravelex.vercel.app",
+         "preview_link": "https://easytravelex.vercel.app/static/media/caroussel5.9f9ac2feae2de8415fe6.webp"
+    },
+    {
+        "name_project": "Tankverse",
+        "date_project": "September 2023",
+        "desc_project": "Tankverse is a fun tank game. This was done in HTML, CSS, and JAVASCRIPT.",
+        "stack": [
+            "HTML",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY"
+        ],
+        "link": "https://tankverse.vercel.app/",
+        "preview_link": "https://tankverse.vercel.app/images/preview.jpg"
+    },
+    {
+        "name_project": "Monsieur Landry",
+        "date_project": "December 2022",
+        "desc_project": "Mr. Landry is a web entrepreneur and content creator on YouTube, committed to delivering high-quality content.",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY",
+            "PHP"
+        ],
+        "link": "https://landry-tau.vercel.app",
+         "preview_link": "https://landry-tau.vercel.app/images/meta.jpg"
+    },
+    {
+        "name_project": "CMFI DOUALA",
+        "date_project": "January 2020",
+        "desc_project": "CMFI DOUALA is a showcase website for Christian Missionary Fellowship International, equipped with a blog module presenting news.",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY",
+            "PHP",
+            "SQL"
+        ],
+        "link": "https://cmfidouala.com",
+        "preview_link": "images/project/cmfi.jpg"
+    },
+    {
+        "name_project": "Shassanis",
+        "date_project": "December 2021",
+        "desc_project": "Shassanis is a company specialized in the manufacture of illuminated signs, neon and LED lighting.",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY",
+            "PHP",
+            "SQL"
+        ],
+        "link": "https://flocod.github.io/shassanis",
+         "preview_link": "images/project/shassanis.jpg"
+    },
+    {
+        "name_project": "Mother and Child Care",
+        "date_project": "June 2021",
+        "desc_project": "Mother and Child Care is an NGO website with a blog module presenting news.",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY",
+            "PHP",
+            "SQL"
+        ],
+        "link": "https://motherandchildcare.org",
+         "preview_link": "images/project/ong.jpg"
+    },
+    {
+        "name_project": "Morel Durand",
+        "date_project": "August 2021",
+        "desc_project": "Morel Durand is a photographer portfolio website.",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY",
+            "PHP",
+            "SQL"
+        ],
+        "link": "https://flocod.github.io/moreldurand/",
+         "preview_link": "images/project/morel.jpg"
+    },
+    {
+        "name_project": "Mourzane",
+        "date_project": "March 2021",
+        "desc_project": "Mourzane is a showcase and e-commerce website for the web influencer Mourzane.",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY",
+            "PHP",
+            "SQL"
+        ],
+        "link": "https://flocod.github.io/mourzane",
+         "preview_link": "images/project/mourzane.jpg"
+    },
+    {
+        "name_project": "Yungong Brijean",
+        "date_project": "February 2022",
+        "desc_project": "Yungong Brijean is a UX/UI portfolio website for designer Yungong Brijean.",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "JAVASCRIPT",
+            "JQUERY",
+            "PHP"
+        ],
+        "link": "https://flocod.github.io/yungongbrijean",
+         "preview_link": "images/project/briand.jpg"
+    }
+]

@@ -7,9 +7,11 @@
   * {
     mix-blend-mode: normal !important;
   }
+
   div {
     mix-blend-mode: normal !important;
   }
+
   img {
     mix-blend-mode: normal !important;
   }
@@ -28,6 +30,7 @@
   --text_rgb: 252, 250, 249;
   --fond: #16161d;
   --fond_rgb: 22, 22, 29;
+
   .no_dark {
     display: none;
   }
@@ -67,11 +70,11 @@ $struct: 90%;
         align-items: flex-start;
       }
 
-      .left {
-      }
+      .left {}
 
       .experience {
         display: block;
+
         .t1 {
           font-family: "Bricolage Grotesque";
           font-weight: 600;
@@ -79,9 +82,11 @@ $struct: 90%;
           letter-spacing: 0em;
           text-align: left;
           color: var(--text);
+
           @media all and (max-width: 1417px) {
             font-size: 3.5em;
           }
+
           @media all and (max-width: 545px) {
             font-size: 3em;
           }
@@ -94,6 +99,7 @@ $struct: 90%;
           letter-spacing: 0em;
           text-align: left;
           color: var(--text);
+
           @media all and (max-width: 545px) {
             font-size: 2.5em;
           }
@@ -135,6 +141,7 @@ $struct: 90%;
           font-size: initial;
           transform: translateY(-30%);
           margin-top: 20px;
+
           .btn_ic {
             display: inline-flex;
           }
@@ -170,6 +177,7 @@ $struct: 90%;
         border-radius: 12px;
         margin-bottom: 30px;
         filter: saturate(100%);
+
         @media all and (max-width: 1417px) {
           width: 48%;
         }
@@ -180,6 +188,7 @@ $struct: 90%;
         }
 
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
         .project_struct {
           height: 95%;
           width: 95%;
@@ -189,7 +198,7 @@ $struct: 90%;
           align-items: center;
           align-content: space-between;
 
-         
+
           transition: 0.3s;
           opacity: 1;
 
@@ -268,6 +277,7 @@ $struct: 90%;
                   font-size: 1em;
                   font-family: "Bricolage Grotesque";
                 }
+
                 @media all and (max-width: 452px) {
                   font-size: 0.9em;
                   font-family: "Bricolage Grotesque";
@@ -275,6 +285,7 @@ $struct: 90%;
 
                 .stack_project {
                   margin-top: 20px;
+
                   .stack {
                     display: inline-block;
                     padding: 10px 15px;
@@ -285,6 +296,7 @@ $struct: 90%;
                     font-size: 14px;
                     line-height: 14px;
                     margin-bottom: 7px;
+
                     @media all and (max-width: 452px) {
                       font-size: 0.9em;
                       font-family: "Bricolage Grotesque";
@@ -311,6 +323,7 @@ $struct: 90%;
             // --webkit-backdrop-filter: blur(30px);
             color: var(--text);
             background: var(--fond);
+
             /* (plus shape's fill blended on top as a separate layer with 61% opacity) */
             @media all and (max-width: 1543px) {
               font-size: 1.2em;
@@ -342,13 +355,13 @@ $struct: 90%;
 
           .project_struct {
 
-            .desc{
+            .desc {
               opacity: 0;
               transition: 0.3s;
               transform: translateY(-110%);
             }
 
-           
+
           }
         }
       }
@@ -359,6 +372,7 @@ $struct: 90%;
 .group_experience {
   .left {
     width: 50%;
+
     @media all and (max-width: 1074px) {
       width: 100%;
     }
@@ -379,6 +393,7 @@ $struct: 90%;
     @media all and (max-width: 1074px) {
       width: 100%;
     }
+
     @media all and (max-width: 545px) {
       font-size: 0.85rem;
     }
@@ -386,6 +401,7 @@ $struct: 90%;
 
   .image_experience {
     width: 100%;
+
     @media all and (max-width: 1074px) {
       display: flex;
       justify-content: center;
@@ -395,9 +411,11 @@ $struct: 90%;
 
     img {
       width: 100%;
+
       @media all and (max-width: 1074px) {
         width: 60%;
       }
+
       @media all and (max-width: 545px) {
         width: 100%;
       }
@@ -422,6 +440,7 @@ $struct: 90%;
     transition: 0.5s;
     box-sizing: border-box;
     box-shadow: -4px 4px 1px var(--text);
+
     &:hover {
       background: var(--text);
       color: var(--fond);
@@ -435,6 +454,7 @@ $struct: 90%;
       height: 73px;
       font-size: 1rem;
     }
+
     @media all and (max-width: 545px) {
       width: 100%;
       height: 73px;
@@ -446,6 +466,7 @@ $struct: 90%;
     display: block;
     width: 100%;
     margin-top: 80px;
+
     .experience_item {
       text-transform: uppercase !important;
       display: flex;
@@ -457,6 +478,7 @@ $struct: 90%;
       padding-top: 20px;
       padding-bottom: 20px;
       color: var(--text);
+
       &:last-child {
         border-bottom: 2px solid #{"rgba(var(--text_rgb), .5)"};
       }
@@ -469,6 +491,7 @@ $struct: 90%;
       .enterprise {
         text-align: left;
         font-family: Bricolage Grotesque;
+
         @media all and (max-width: 366px) {
           text-align: center;
           width: 100%;
@@ -477,6 +500,7 @@ $struct: 90%;
 
       .experience_detail {
         text-align: right;
+
         @media all and (max-width: 366px) {
           text-align: center;
           width: 100%;
@@ -510,6 +534,7 @@ $struct: 90%;
         @media all and (max-width: 1000px) {
           font-size: 1.5em;
         }
+
         @media all and (max-width: 660px) {
           font-size: 1.2em;
         }
@@ -521,6 +546,7 @@ $struct: 90%;
         font-size: 30px;
         letter-spacing: 0em;
         line-height: 40px;
+
         @media all and (max-width: 1000px) {
           font-size: 1em;
           line-height: normal;
@@ -528,9 +554,11 @@ $struct: 90%;
           //   display: none;
           // }
         }
+
         @media all and (max-width: 660px) {
           font-size: 0.8em;
         }
+
         @media all and (max-width: 500px) {
           font-size: 14px;
           margin-top: 4px;
@@ -542,6 +570,7 @@ $struct: 90%;
 
       .date {
         margin-bottom: 30px;
+
         @media all and (max-width: 1000px) {
           margin-bottom: 8px;
         }
@@ -552,6 +581,7 @@ $struct: 90%;
           font-size: 12px;
           font-weight: 600;
         }
+
         @media all and (max-width: 366px) {
           margin-top: 8px;
           margin-bottom: 8px;
@@ -568,6 +598,7 @@ $struct: 90%;
     align-items: center;
     flex-direction: column;
     color: var(--text);
+
     .small {
       font-family: Roboto;
       font-weight: normal;
@@ -577,6 +608,7 @@ $struct: 90%;
       font-family: Bricolage Grotesque;
       font-size: 2em;
       margin-bottom: 10px;
+
       @media all and (max-width: 1243px) {
         font-size: 1.5em;
       }
@@ -596,9 +628,11 @@ $struct: 90%;
         font-size: 3em;
         width: 100%;
       }
+
       @media all and (max-width: 660px) {
         font-size: 2.5em;
       }
+
       @media all and (max-width: 500px) {
         font-size: 1.5em;
       }
@@ -631,9 +665,11 @@ $struct: 90%;
         font-size: 1.7em;
         width: 100%;
       }
+
       @media all and (max-width: 660px) {
         font-size: 1.4em;
       }
+
       @media all and (max-width: 639px) {
         display: flex;
         align-items: center;
@@ -651,6 +687,7 @@ $struct: 90%;
       div {
         margin-bottom: 10px;
         text-transform: lowercase;
+
         @media all and (max-width: 500px) {
           margin-bottom: 5px;
         }
@@ -660,19 +697,22 @@ $struct: 90%;
 
   .contain_contact_center {
     justify-content: center;
+
     .contain_item {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       text-align: center;
+
       div {
         display: inline-block;
-        
+
         text-align: center;
-   
+
       }
-      a{
+
+      a {
         display: block;
         text-transform: lowercase;
         margin-bottom: 10px;
@@ -691,6 +731,7 @@ $struct: 90%;
     .contain_item {
       img {
         width: 50%;
+
         @media all and (max-width: 639px) {
           width: 80%;
         }
@@ -724,6 +765,7 @@ $struct: 90%;
           font-size: initial;
           transform: translateY(-30%);
           margin-top: 20px;
+
           .btn_ic {
             display: inline-flex;
           }
@@ -750,6 +792,7 @@ $struct: 90%;
       font-size: 1.2em;
       padding-bottom: 10px;
     }
+
     @media all and (max-width: 360px) {
       font-size: 0.8em;
     }
@@ -758,6 +801,7 @@ $struct: 90%;
       display: flex;
       width: 33%;
       justify-content: space-between;
+
       @media all and (max-width: 800px) {
         width: 100%;
         justify-content: center;
@@ -765,9 +809,11 @@ $struct: 90%;
 
       &__item {
         text-transform: uppercase;
+
         @media all and (max-width: 943px) {
           font-size: 0.8em;
         }
+
         @media all and (max-width: 800px) {
           margin-left: 10px;
           margin-right: 10px;
@@ -793,12 +839,13 @@ footer {
   display: block;
   width: 100%;
   position: relative;
+
   .banderol_footer {
     display: block;
- 
+
     overflow: hidden;
     width: max-content;
-   
+
     .text {
       font-family: "Bricolage Grotesque";
       margin-top: 0px;
@@ -810,21 +857,21 @@ footer {
       color: var(--text);
       // text-transform: uppercase;
       animation: scrollLeft 100s linear infinite;
-      white-space:nowrap;
-     
+      white-space: nowrap;
+
       display: flex;
       width: 100%;
       justify-content: space-between;
 
       @media all and (max-width: 1000px) {
-       font-size: 3em;
+        font-size: 3em;
       }
 
 
       span {
-        
+
         &:nth-child(2n) {
-   
+
           color: transparent;
           -webkit-text-stroke-color: var(--text);
           -webkit-text-stroke-width: 1px;
@@ -845,22 +892,22 @@ footer {
     }
   }
 
-  .banderol_footer_stack{
+  .banderol_footer_stack {
     .text {
-     
+
       margin-top: 20px;
       animation: scrollRight 25s linear infinite;
 
 
       @media all and (max-width: 1000px) {
-       font-size: 3em;
+        font-size: 3em;
       }
 
 
       span {
-        
+
         &:nth-child(2n) {
-          
+
           color: transparent;
           -webkit-text-stroke-color: var(--text);
           -webkit-text-stroke-width: 1px;
@@ -880,9 +927,7 @@ footer {
       }
     }
 
-  
+
   }
 
 }
-
-
